@@ -9,6 +9,32 @@
     <link rel="stylesheet" media="screen" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_favicon.jpg">
     <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        /*
+         the id #owl-example described below must match the id of the div which defines your carousel
+         */
+        $(document).ready(function() {
+            $("#owl-example").owlCarousel({
+                /*  --------------------------------------
+                 add customization options here!!
+                 */
+                slideSpeed : 800,
+                paginationSpeed : 400,
+                singleItem:true,
+                autoPlay: 3500,
+                items : 1,
+                stopOnHover : true,
+                itemsDesktop : [1199,1],
+                itemsDesktopSmall : [979,1],
+                itemsTablet :   [768,1],
+            })
+        });
+
+    </script>
 </head>
 
 <body>
@@ -39,6 +65,14 @@
 </nav>
 
 <section>
+    <div class="container">
+        <br>
+        <div id="owl-example" class="item">
+            <div><img src="images/mark_homepage.jpg" alt="Mark's Homepage - www.bcitcomp.ca/students/mtasaka" /></div>
+            <div><img src="images/vaidas_homepage.jpg" alt="Vaidas's Homepage - www.bcitcomp.ca/students/vmakselis" /></div>
+            <div><img src="images/melanie_homepage.jpg" alt="Melanie's Homepage - www.bcitcomp.ca/students/molson29"" /></div>
+        </div>
+    </div>
 
 </section>
 
