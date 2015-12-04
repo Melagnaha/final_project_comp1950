@@ -1,0 +1,292 @@
+
+
+
+body{
+
+    font-family: sans-serif, arial;
+    font-size: 16px;
+    left:0;
+    right:0;
+    width:100%;
+    margin-left: 0;
+    background-color:floralwhite;
+}
+
+/* *********** Headers *********** */
+
+h1{
+    float:right;
+    clear:both;
+    position:relative;
+    color:floralwhite;
+    opacity: .8;
+}
+
+h2{
+    margin-top:60px;
+    margin-left:80px;
+    margin-bottom:10px;
+    color:sienna;
+}
+
+h3{
+
+    color: floralwhite;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-align:left;
+    margin:10px;
+}
+
+h4{
+    color: #1D3451;
+    font-size: 1rem;
+    text-align:left;
+    margin:10px;
+}
+
+h5{
+    margin-top:1em;
+}
+
+p{
+   /* margin:20px 0 0 20px; */
+}
+
+
+/* *********** Top bar *********** */
+
+#prot{
+    position:fixed;
+    font-size:5rem;
+    color:floralwhite;
+    opacity: .4;
+}
+
+#description{
+    top:50px;
+    position:fixed;
+    font-size:2rem;
+    color:floralwhite;
+}
+
+header{
+    height: 120px;
+    width:100%;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 40px;
+}
+
+#navigationBar h1{
+    margin-right:20px;
+}
+
+#navigationBar{
+
+    margin:0;
+    padding:0;
+    left:0;
+    right:0;
+    height: 100px;
+    overflow: hidden;
+    min-width: 300px;
+    background-color: rgba(0,180,190,.8);
+    position: fixed;
+    z-index:10;
+
+    border-bottom-style: solid;
+    border-color: floralwhite;
+
+    box-shadow: 10px 3px 24px slategray;
+}
+
+
+#rightSideMenuItems{
+    margin:0 40px 0 0;
+}
+
+#rightSideMenuItems li a{
+
+    padding:0;
+    margin:0;
+    display:block;
+    text-decoration:none;
+    color:floralwhite;
+    align-self: center;
+
+    transition: color 200ms, font-size 200ms;
+}
+
+#rightSideMenuItems li a:hover{
+    color:coral;
+    font-size: 1.1em;
+}
+
+
+.menuButton{
+    float:right;
+    width: 10%;
+    height:inherit;
+    list-style-type: none;
+    color:floralwhite;
+    display:inline-block;
+    font-size:1em;
+    text-align: center;
+}
+
+
+/* *********** Main body *********** */
+
+
+
+/* Links style */
+
+a{
+    text-decoration:none;
+    color: #ebf0ff;
+    align-self: center;
+
+    transition: color 200ms;
+}
+
+a:hover{
+    color: #006487;
+}
+
+b{
+    color: floralwhite;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-align:left;
+    margin:10px;
+}
+section{
+
+    width:80%;
+    height:auto;
+    min-width: 120px;
+    padding:20px 30px 3px;
+    margin:12px auto 20px;
+
+    border-style:solid;
+    border-radius: 12px;
+    border-color:floralwhite;
+    box-shadow:6px 6px 6px rgba(130,180,190,.8);
+    display:block;
+    background-color: rgb(70, 190, 94);
+}
+
+strong{
+    color:sienna;
+    line-height: 2em;
+}
+
+section dt {
+    border-bottom-style: dashed;
+    border-bottom-color: rgb(77, 219, 131);
+    margin-bottom: 20px;
+}
+
+/* *********** Footer *********** */
+
+#myFooter{
+
+    display:block;
+    margin: 90px auto 20px auto;
+    width: 100%;
+    background-color: chocolate;
+
+    z-index:10;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-style: solid;
+    border-color: floralwhite;
+
+    box-shadow: 10px 3px 24px slategray;
+
+    position: absolute;
+}
+
+#myFooter span{
+    display:inline-block;
+    font-size:.9em;
+    color:floralwhite;
+    font-weight: lighter;
+    width: 13%;
+    margin: 12px auto;
+    text-align: center;
+}
+
+#myFooter span a{
+
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:floralwhite;
+    align-self: center;
+
+    transition: color 200ms, font-size 200ms;
+}
+
+#myFooter span:first-child {
+    margin-left:60px;
+}
+
+#myFooter span a:hover{
+    color:coral;
+}
+
+
+#validator{
+    width:100px;
+    margin:20px auto;
+}
+
+
+
+/* ******** classes ******** */
+
+.info{
+    width:90%;
+    color:floralwhite ;
+    background-color:coral;
+    border-style: dashed;
+    border-color: chocolate;
+    border-width: thick;
+    box-shadow:0 0 16px rgb(190, 48, 38);
+}
+
+.lectureImg{
+    display: inline-block;
+    width:80px;
+    height:80px;
+    border-radius:10px;
+    border: 2px dashed #d5d1d7;
+}
+
+.lecture{
+    display: inline-flex;
+}
+
+section ul {
+    display:inline-block;
+}
+
+.locked{
+    background-color: slategrey;
+}
+
+.active{
+    background-color: rgb(70, 190, 94);
+    transition: all 600ms;
+}
+
+.active:hover{
+    background-color: coral;
+}
