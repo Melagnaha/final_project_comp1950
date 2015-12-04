@@ -129,11 +129,11 @@
         <option value="$PROJECT_DIR$/proposal_sitemap.html" />
         <option value="$PROJECT_DIR$/proposal_rationale.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/protosite/protosite-home.html" />
         <option value="$PROJECT_DIR$/protosite/protosite-resources.html" />
         <option value="$PROJECT_DIR$/protosite/protosite-lectures.html" />
         <option value="$PROJECT_DIR$/protosite/protosite-associated.html" />
         <option value="$PROJECT_DIR$/protosite/protosite-about.html" />
+        <option value="$PROJECT_DIR$/protosite/protosite-home.html" />
       </list>
     </option>
   </component>
