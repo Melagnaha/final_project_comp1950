@@ -12,10 +12,7 @@
     header {
         background-color: #01bdc6;
 
-        -webkit-margin-before: 0px;
-        -webkit-margin-after: 0px;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
+       margin: 0;
     }
 
     h1 {
@@ -25,8 +22,10 @@
         text-shadow: 2px 2px #008389;
     }
 
-    section {
-
+    table{
+        width:100%;
+        border:0;
+        background-color: #01bdc6;
     }
 
     a:visited {
@@ -35,11 +34,6 @@
 
     a:hover {
         color: #FF0700;
-    }
-
-    table {
-        background-color: #01bdc6;
-
     }
 
     td li {
@@ -63,7 +57,7 @@
 
         margin: 10px 0 10px 50px;
 
-        -webkit-box-shadow: 5px 5px 5px #008389;
+        box-shadow: 5px 5px 5px #008389;
     }
 
     td h1 {
@@ -71,7 +65,7 @@
         padding-right: 50px;
     }
 
-    section img {
+    div img {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -155,6 +149,11 @@
         margin-bottom: 50px;
         padding: 20px;
     }
+
+    #heading{
+        font-size: 225%;
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 10px) and (max-width: 800px) {
@@ -170,16 +169,17 @@ body{
 
     header {
         background-color: #01bdc6;
-        -webkit-margin-before: 0px;
-        -webkit-margin-after: 0px;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
+        margin: 0px;
         padding-top: 20px;
         padding-bottom: 20px;
     }
 
     table td {
         background-color: #01bdc6;
+    }
+
+    table {
+        width: 100%;
     }
 
     td h1 {
@@ -243,17 +243,32 @@ body{
         text-decoration: none;
         color: #008389;
         font-style: italic;
-
     }
+
 
     /*
     ----------------------------------
     Class Selectors
     __________________________________
     */
+
+    .section p{
+        text-align: justify;
+        margin: 20px;
+    }
+
+    .section h2{
+        margin: 20px;
+    }
+
+
     /*
     ----------------------------------
     ID Selectors
     __________________________________
     */
+
+    #heading{
+        font-size: 200%;
+    }
 }
