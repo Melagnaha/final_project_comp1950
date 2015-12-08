@@ -49,8 +49,14 @@ h5{
     margin-top:1em;
 }
 
+h6{
+    margin:20px;
+    font-size: 3rem;
+    color:floralwhite;
+}
+
 p{
-   /* margin:20px 0 0 20px; */
+   margin:8px;
 }
 
 
@@ -167,10 +173,12 @@ b{
 }
 section{
 
-    width:80%;
+    position:relative;
+
+    width:88%;
     height:auto;
     min-width: 120px;
-    padding:20px 30px 3px;
+    padding:20px 30px 12px;
     margin:12px auto 20px;
 
     border-style:solid;
@@ -253,13 +261,40 @@ section dt {
 /* ******** classes ******** */
 
 .info{
-    width:90%;
+    width:92%;
     color:floralwhite ;
     background-color:coral;
     border-style: dashed;
     border-color: chocolate;
     border-width: thick;
     box-shadow:0 0 16px rgb(190, 48, 38);
+}
+
+.lectureShortcuts{
+    width: 48%;
+    float: right;
+    position: absolute;
+    top: 80px;
+    right: 2%;
+}
+
+.lectureShortcutImg{
+    display: inline-block;
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px dashed #D5D1D7;
+    float: right;
+    margin: auto 0 auto 2%;
+    text-align: center;
+    color: floralwhite;
+    font-size: 0.8rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+.lectureShortcutImg:hover{
+    background-color: rgb(70, 190, 94);
 }
 
 .lectureImg{
@@ -289,4 +324,33 @@ section ul {
 
 .active:hover{
     background-color: coral;
+}
+
+.open{
+    background-color: cornsilk;
+    margin: 20px -28px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+main > div a{
+    color:dodgerblue;
+}
+
+main > div b{
+    color:chocolate;
+}
+
+.start{
+    background-color:rgb(70, 190, 94);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.start:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display:none;
 }

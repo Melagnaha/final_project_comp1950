@@ -20,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="styles/protositestyles.css" title="Default_styles">
     <link rel="alternate stylesheet" type="text/css" href="styles/Print_Styles.css" title="Print_Styles">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
 </head>
 
@@ -40,7 +42,7 @@
                 <li class="menuButton"><a href="mailto:professor@bcit.ca">Contact</a></li>
                 <li class="menuButton"><a href="../protosite/protosite-lectures.html#">Lectures</a></li>
                 <li class="menuButton"><a href="../protosite/protosite-resources.html#">Resources</a></li>
-                <li class="menuButton"><a href="../protosite/protosite-about.html#">About </br>the course</a></li>
+                <li class="menuButton"><a href="../protosite/protosite-about.html#">About <br />the course</a></li>
                 <li class="menuButton"><a href="../protosite/protosite-home.html#">Home</a></li>
             </ul>
 
@@ -73,18 +75,1336 @@
         <li>standards based development</li>
     </ul>
 
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+    </div>
+
+    <main class="hidden">
+        <div id="maincont">
+            <h1>lecture one: course introduction</h1>
+            <h2>Agenda</h2>
+            <div class="contblock">
+                <ul>
+                    <li>introductions</li>
+                    <li>orientation</li>
+                    <li>web development tools</li>
+                    <li>standards based development</li>
+                </ul>
+            </div>
+
+            <h2>Introductions</h2>
+            <div class="contblock">
+                <ul>
+                    <li> <b>instructor:</b> Jeff Parker</li>
+                    <li> <b>email:</b> <a href="mailto:jeffrey_parker@bcit.ca">jeffrey_parker@bcit.ca</a></li>
+                    <li> <b>web site:</b> this is it </li>
+                    <li> <b>all about you...</b>
+                        <ul>
+                            <li> your name </li>
+                            <li> your background</li>
+                            <li> what do you hope to achieve in this course? Be specific!</li>
+                        </ul></li>
+                </ul>
+            </div>
+
+
+            <h2>Orientation: Course overview</h2>
+            <div class="contblock">
+                <p>Learn <a href="/1950/courseinfo/">about the course</a> to help you determine if this is the right class for you.</p>
+
+            </div>
+
+            <h2>Orientation: Personal files</h2>
+            <div class="contblock">
+                <p>Each student is assigned BCIT network storage space, you may store your in-class work here. All work performed on lab computers should be saved to personal files.</p>
+                <p>When working on any BCIT lab computer, vist the H: drive. When away from a lab computer, you can access your personal files remotely, see the <a href="https://helpdesk.bcit.ca/sr/network/734.html">BCIT help desk instructions</a>.</p>
+                <p>If you do your in class work on a personal laptop, or save to a USB key, you do not need to use the personal files area.</p>
+
+            </div>
+
+            <!--
+                    <h2>Orientation: Connect to the BCIT share OUT</h2>
+                    <div class="contblock">
+                    <p>The BCIT share directories provide all in class example code, walkthroughs and resources as demonstrated in class. Homework specifications will also be published here. You may access the share OUT via the instructions described at the <a href="https://helpdesk.bcit.ca/sr/network/734.html">BCIT help desk</a>, OR you may set up Filezilla to handle it.  </p>
+
+                    <ol>
+            <li>choose: File->SiteManager->New Site, then describe the FTP server, eg "BCIT share OUT"</li>
+            <li>Host:   share.bcit.ca </li>
+            <li>Port:   21</li>
+            <li>User:   {yourStudentNumber}</li>
+            <li>Password:  {your birthdate formatted as YYMMDD} </li>
+            <li>Servertype:  FTPES - FTP over explicit TLS/SSL  </li>
+            <li>LogonType:  Normal </li>
+            <li>click: Connect</li>
+
+                    </ol>
+            <p>If you experience connectivity problems, re-check your input, or contact the BCIT help desk for assistance.</p>
+                    </div>
+            -->
+
+            <h2>Orientation: Web space</h2>
+            <div class="contblock">
+                <p>Each student will get personal webspace. This is not a continuation of your COMP1850 site (if you had one).  This site is primarily for you to house your exercises, assignments, group work and more.  Make it a site that is usable and functional.</p>
+                <ul>
+
+                    <li>Your instructor will create webspaces for each of you.</li>
+                    <li>Email your instructor this information:
+                        <ul>
+                            <li>your myBCIT email name - eg: youname123@my.bcit.ca</li>
+                            <li>your student number - eg: A00123456</li>
+                            <li>a case sensitive password you will remember - ???</li>
+                        </ul>
+                    </li>
+                    <li>Your URL will be: <strong>http://bcitcomp.ca/students/{your_mybcit_email_name}</strong></li>
+                </ul>
+            </div>
+
+            <h2>Connect to your bcitcomp.ca account via FTP</h2>
+            <div class="contblock">
+                <p>Use Filezilla, or any FTP client to connect to bcitcomp.ca. The bcitcomp.ca server provides you with a space on the internet where you can publish your homework and assignments.</p>
+
+                <ol>
+                    <li>choose: File-&gt;SiteManager-&gt;New Site, then describe the FTP server, eg "bcitcomp.ca"</li>
+
+                    <li>Host:   bcitcomp.ca </li>
+                    <li>Port:   21</li>
+                    <li>User:   {yourStudentNumberUsingAnUppercaseA}@bcitcomp.ca </li>
+                    <li>Password:  {determined by you via email to your instructor} </li>
+                    <li>Servertype:  FTP File Transfer Protocol </li>
+                    <li>LogonType:  Normal </li>
+
+                    <li>click: Connect</li>
+
+                </ol>
+                <img src="/1950/images/filezilla_signalflare.jpg" alt="filezilla FTP login screenshot" height="438px" width="512px">
+                <p>If you experience connectivity problems, re-check your input, or ask your instructor for assistance.</p>
+            </div>
+
+            <h1>lecture one: tools &amp; standards</h1>
+
+
+            <h2>Tools: Web Development</h2>
+            <div class="contblock">
+                <p>There are a LOT of tools to choose from these days. Desktop and mobile apps, online tools and services, etc. </p>
+                <p>
+                    <strong>What kind of tools do you use?</strong>
+                </p>
+                <p>
+                    Workflow is defined as the process you take getting from start to completion on a task or series of tasks. For web development, it generally results in a page that has been created or updated by the use some kind of tool.
+                </p>
+                <p>There is no perfect platform or workflow, there is only <strong>your</strong> platform and workflow that matters.  Once you can get the job done, you are off to the races, so find a workflow that suits you the best.</p>
+
+                <p>Some of the tools used by web developers...</p>
+                <h3>Text Editors</h3>
+                <ul>
+                    <li><a href="http://notepad-plus-plus.org/">Notepad++</a> - Text Editor (Win) * installed in BCIT lab computers *</li>
+                    <li><a href="http://www.sublimetext.com/2">Sublime Text 2</a> - Text Editor (Mac/Win)</li>
+                    <li><a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> - Text Editor (Mac)</li>
+                </ul>
+                <h3>FTP (File Transfer Protocol) Clients</h3>
+                <ul>
+                    <li><a href="http://filezilla-project.org">Filezilla</a> - FTP tool (Win) * installed in BCIT lab computers *</li>
+                    <li><a href="http://cyberduck.ch/">Cyberduck FTP</a> - FTP tool (Mac)</li>
+                    <li><a href="http://www.wsftple.com/">WS FTP</a> - FTP tool (Win)</li>
+
+                </ul>
+                <h3>IDEs (Integrated Development Environments)</h3>
+                <ul>
+                    <li><a href="http://www.panic.com/coda/">Coda</a> - Web Dev IDE (Mac)</li>
+                    <li><a href="http://www.adobe.com/products/dreamweaver.html">Dreamweaver</a> - Web Dev IDE (Mac/Win)</li>
+                    <li><a href="http://www.aptana.com/">Aptana</a> - Web Dev IDE (Win/Mac)</li>
+                    <li><a href="http://www.htmlkit.com/">HTMLKit</a> - Web Dev IDE (Win)</li>
+                    <li><a href="http://www.textasticapp.com/">Textastic</a> - Web Dev IDE (iPad)</li>
+                    <li><a href="http://www.activestate.com/komodo-edit">Komodo</a> - Web Dev IDE (Mac/Win)</li>
+                </ul>
+                <h3>Team Development</h3>
+                <ul>
+                    <li><a href="http://dropbox.com">Dropbox</a> - File Sharing (Web)</li>
+                    <li><a href="https://github.com/">GitHub</a> - Collaborative Development (Web/Client)</li>
+                </ul>
+
+            </div><!-- END .contblock -->
+
+            <h2>Tools: Browser-based development</h2>
+            <div class="contblock">
+                <p>
+                    Today, most modern browsers have some kind of development environment that can be turned on or triggered via extensions and/or plug-ins.
+                </p>
+                <p>
+                    There are presently two major development platforms, with a few variations for examining and developing web pages.
+                </p>
+                <ul>
+                    <li><a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>
+                        <ul>
+                            <li>Mozilla Foundation's web platform created by web developers</li>
+                            <li>Gecko rendering engine: fast and progressive</li>
+                            <li>Excellent level of standards compliance</li>
+                            <li>Corporate independence</li>
+                            <li>No built-in development tools</li>
+                            <li>Plethora of add-ons that make web development easy</li>
+                            <li>Add-ons have a downside: bloat</li>
+                        </ul></li>
+                </ul>
+                <ul>
+                    <li><a href="http://www.webkit.org/">WebKit</a>
+                        <ul>
+                            <li>This is the platform that gives us <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.apple.com/safari/">Safari</a> and <a href="http://www.opera.com/">Opera</a>, with a few other smaller browsers out there as well.</li>
+                            <li>Excellent platform that is very fast and standards compliant</li>
+                            <li>Third parties can download the source, make local adjustments and release their own version, as Google and Apple have both done</li>
+                            <li>Standalone version can be downloaded at any time for the latest release</li>
+                            <li>Development is done via the built-in Developer Tools</li>
+                            <li>Initially a thin environment, recent releases have made Webkit-based browsers excellent for developers</li>
+                            <li>Macintosh based developers may need to <a href="http://www.jonhartmann.com/index.cfm/2011/4/28/Enabling-Safari-Developer-Tools">enable web developer options</a> in Safari before accessing the devloper tools</li>
+                        </ul></li>
+                </ul>
+
+
+
+                <p>
+                    <strong>Remember to test in as many browsers as you can! Useful tools for this are <a href="http://browsershots.org/">BrowserShots</a> (Chrome, Firefox, Safari, Opera) and <a href="http://netrenderer.com/">Netrenderer</a> (For IE)</strong>
+                </p>
+            </div><!-- END .contblock -->
+
+
+
+            <h2>Tools: Firefox Extensions</h2>
+            <div class="contblock">
+
+                <p>Extensions are a big part of Firefox, especially considering the background the browser has in web development.</p>
+
+                <p>
+                    In fact, web development even has it's own category dedicated to <a href="https://addons.mozilla.org/en-US/firefox/browse/type:1/cat:4">Web and Developer Tools</a>
+                </p>
+
+                <p>
+                    One of the best tools for Web Developers is the <a href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/?src=search">
+                    Web Developer toolbar
+                </a>
+                </p>
+
+                <p>The author, Chris Pedrick, maintains a <a href="http://chrispederick.com/work/webdeveloper/">
+                    site for the Web Developer extension</a>. He has even created a version for seeral other browsers, though it isn't quite as full-featured.
+
+                </p>
+                <p>Some of the amazing tools this has to offer web developers:
+                </p><ul>
+                <li>Disable styles - by embedded/linked/inline as well as all styles, or just a single sheet</li>
+                <li>Edit CSS &amp; HTML - Make live changes to your CSS or HTML!</li>
+                <li>Images - outlining, file sizes, alt information... lots more</li>
+                <li>Form detail - useful for working with form elements</li>
+                <li>Cookie examination and manipulation</li>
+                <li>Built in validators</li>
+                <li>Line Guides &amp; Rulers</li>
+                <li>Element inspector</li>
+            </ul>
+                <p></p>
+
+                <p>
+                    <strong>Let's take a quick look at the Web Developer Toolbar</strong>
+                </p>
+                <ul>
+                    <li>Install it if you have not already done so</li>
+                    <li>Validate the HTML of this page with the Tools tab (Tools &gt; Validate HTML)</li>
+                    <li>Validate the CSS of this page with the Tools tab (Tools &gt; Validate CSS)</li>
+                    <li>View the CSS of the page (CSS &gt; View)</li>
+                </ul>
+            </div>
+
+
+            <h2>Browser Based Diagnostic Tools</h2>
+            <div class="contblock">
+                <p>As web pages get more complex, it can become difficult figuring out what is going on. For example, CSS rules that override other CSS rules, if spread across several files, can be challenge to make sense of. Having a diagnostic tool to assist in developing will make it easier to examine every detail of web pages. </p>
+                <ul>
+                    <li><a href="http://www.getfirebug.com/" title="Get Firebug!">Diagnostic Tool: Firefox Firebug</a></li>
+                    <li><a href="https://developers.google.com/chrome-developer-tools/">Diagnostic Tool: Chrome</a></li>
+                    <li> <a href="https://developer.apple.com/safari/tools/">Diagnostic Tool: Safari</a></li>
+                    <li><a href="http://msdn.microsoft.com/en-ca/library/gg589507(v=vs.85).aspx">Diagnostic Tool: Internet Explorer</a></li>
+                </ul>
+
+                <p>Get familiar with using one of these tools. You will be required to use them in the classes ahead.</p>
+                <p><strong>NOTE:</strong> changes you make with the tool are <strong>client based</strong>, this does not actually affect the HTML/CSS files</p>
+                <p>These tools go beyond outlining, examining and editing into deep troubleshooting of network, javascript and even XHR (XMLHttpRequest).</p>
+            </div>
+
+            <h2>Exercise: Work with a broswer diagnotic tool</h2>
+            <div class="contblock">
+                <ul>
+                    <li>open or install one of the browser diagnostic tools</li>
+                    <li>use the element selector to inspect parts of the page. take note if there is a color coded display for determining margin, padding, etc</li>
+                    <li>select elements and examine the CSS cascade affecting them</li>
+                    <li>enable or disable some CSS rules</li>
+                    <li>add a new CSS rule of your own</li>
+                    <li>add or change some of the HTML</li>
+                    <li>refresh your browser... and watch all your alterations turn into nothing but sweet memories!</li>
+                </ul>
+
+            </div>
+
+
+            <h2>Developer Tools Wrap up</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Firefox was the first browser to have real tools embedded and, with extensions, it's a real powerhouse now</li>
+                    <li>The last few years have seen a constant progression of improved tools in other browsers, bringing everything up a significant notch</li>
+                    <li>Not a bad idea to have a "dev browser" that can be weighted down with tools</li>
+                </ul>
+
+            </div>
+
+
+
+            <h2>Standards</h2>
+
+            <div class="contblock">
+
+                <h3>What are standards?</h3>
+                <ul>
+                    <li>Definition of standards?</li>
+                    <li>What are some examples of standards in real life?
+                        <ul>
+                            <li>	Lightbulbs</li>
+                            <li>	Grades of gasoline</li>
+                            <li>	Train rail widths</li>
+                            <li>	TV Broadcast signals</li>
+                        </ul></li>
+                </ul>
+
+                <h3>Why use them?</h3>
+                <ul>
+                    <li>Interoperability</li>
+                    <li>Predictable results/dimensions/values</li>
+                    <li>A new specification is not needed for each new manufacturing run</li>
+                    <li>Need a new microwave? You can count on:
+                        <ul>
+                            <li>Plug/Voltage/Power</li>
+                            <li>Unit size</li>
+                            <li>Operation</li>
+                        </ul></li>
+                </ul>
+
+                <h3>Web Standards</h3>
+                <p>When you build without standards, you are investing in the here and now, without thinking of tomorrow.</p>
+                <ul>
+                    <li>Code that doesnt follow standards cannot be expected to behave predictably in the various web browsers</li>
+                    <li>Non standard code is hard to support</li>
+                    <li>Re-engineering and/or maintaining poorly coded websites can be very difficult, costly and time consuming</li>
+
+                </ul>
+            </div>
+
+
+            <h2>Standards: Web</h2>
+
+            <div class="contblock">
+
+                <h3>ISO: International Organization for Standards ( <a href="http://www.iso.org/">
+                    http://www.iso.org
+                </a> )</h3>
+                <ul>
+                    <li><strong>1906</strong>: As the Intn'l Electrotechnical Commission (IEC): in order to better access pre-determined equipment that was interchangeable and interoperable</li>
+                    <li><strong>1947</strong>: 25 countries got together to form ISO: "to facilitate the international coordination and unification of industrial standards"</li>
+                    <li>Companies agree to become a part of ISO, and gain access to the complete library of standards set by the organization in concert with their many members</li>
+                    <li>While it started slowly, many companies ignored standards, in favor of their own "proprietary" methods</li>
+                    <li>Momentum, corporate marketing (companies advertising that their product or method conforms with ISO XXXX), and some government legislation (forcing the adoption of certain standards) led to a larger adoption of standards</li>
+                </ul>
+
+                <h3>W3C: World Wide Web Consortium ( <a href="http://www.w3.org/">http://www.w3.org</a> )</h3>
+
+                <ul>
+                    <li>Web standards are going through the same process that the ISO went through</li>
+                    <li>Many companies see the benefits of interoperability - many are still "forging their own"</li>
+                    <li>Many companies have standards: Adobe, Microsoft, Apple, Ford, GM</li>
+                    <li>Many are proprietary standards, and are not supported by many companies</li>
+                    <li>W3C - World Wide Web Consortium: founded by Tim Berners-Lee to try and uniformly put forward standards through a single communication vehicle</li>
+                    <li>Leading browser makers did not follow, initially</li>
+                    <li>Designers were 'taking sides' in the browser wars: users were losers</li>
+                </ul>
+
+                <h3>W3C Goals</h3>
+                <ol>
+                    <li><strong>Universal Access</strong>: To make the Web accessible to all by promoting technologies that take into account the vast differences in culture, languages, education, ability, material resources, access devices, and physical limitations of users on all continents;</li>
+                    <li><strong>Semantic Web</strong>: To develop a software environment that permits each user to make the best use of the resources available on the Web;</li>
+                    <li><strong>Web of Trust</strong>: To guide the Web's development with careful consideration for the novel legal, commercial, and social issues raised by this technology.</li>
+                </ol>
+
+                <h3>Making Progress</h3>
+                <ul>
+                    <li>Eventually, the drive towards standards began to win out</li>
+                    <li>Users made their voices known and momentum started to slowly shift toward supporting standards</li>
+                    <li>Seen as a marketing opportunity: <em>Our browser supports standards!</em></li>
+                    <li>Mozilla Project emerged after a large number of Netscape developers were let go upon the acquisition by AOL</li>
+                    <li>Mozilla is now a standards-compliant browser with many features</li>
+                    <li>Microsoft and AOL followed shortly with adoption of W3C standards (with limitations)</li>
+                    <li>Large companies started joining the W3C to be seen as part of the Standards game</li>
+                </ul>
+
+                <h3>For Web Developers</h3>
+                <p>Designing to current W3C specifications means that:</p>
+                <ul>
+                    <li>your pages will be viewable in the largest number of browsers, </li>
+                    <li>the largest number of devices </li>
+                    <li>and (if used correctly) will gracefully degrade as support for CSS or other presentation layers are absent.</li>
+                </ul>
+                <p>Some more words about <a href="http://www.webstandards.org/learn/faq/">Web Standards</a> worth reading</p>
+                <h3>Discussion:</h3>
+                <ul>
+                    <li>what is the current W3C recommended version for HTML?</li>
+                    <li>what is the current W3C recommended version for CSS?</li>
+                    <li>what are the consequences of using a non-standard version?</li>
+                </ul>
+
+            </div>
+
+            <h2>Details of Standards-Driven Development</h2>
+            <div class="contblock">
+                <h3>Three goals of standards-driven development:</h3>
+                <ol>
+                    <li>compatibility (creating web pages that work well in all browsers)</li>
+                    <li>portability (writing code that works well in any computing environment/operating system)</li>
+                    <li>accessibility (produce web pages that are optimized for search engines, screen readers, etc)</li>
+                </ol>
+
+
+                <h3>Requirements</h3>
+                <ul>
+                    <li>HTML + CSS + DOM = Agile Web Sites</li>
+                    <li>Structurally valid HTML code (eg: tags that open are closed. parent-child tag relationships are valid, etc)</li>
+                    <li>Logically valid HTML code (eg: ids are not applied more than once per page)</li>
+                    <li>Use CSS to develop sites that separate content (HTML) from presentation (CSS)</li>
+                    <li>Using Semantic Markup to establish content relationships and logical deployment of content</li>
+                </ul>
+
+
+                <h3>Future Compatibility</h3>
+                <ul>
+                    <li>Code is easier to use for future developers</li>
+                    <li>Less presentational HTML means easier design changes</li>
+                    <li>Keep the same code for longer periods of time</li>
+                    <li>Optimally, <strong>never</strong> change your code (if all presentation is gone)</li>
+                </ul>
+
+                <h3>Reduced Development Costs</h3>
+                <ul>
+                    <li>Shorter development times for style changes</li>
+                    <li>CSS based layouts are easier to redesign, superior to HTML table layouts</li>
+                    <li>Easier to integrate with CMS (Content Management System) tools</li>
+                </ul>
+
+                <h3>Special Needs</h3>
+                <ul>
+                    <li>HTML lends itself to assistive readers (low vision, etc)</li>
+                    <li>Can support multiple stylesheets for different user needs</li>
+                    <li>An eye-opening exercise: try browsing with <a href="http://www.webbie.org.uk/">Webbie</a>, a browser for the blind</li>
+                </ul>
+
+
+                <h3>Single Codebase</h3>
+                <ul>
+                    <li>No complex browser sniffing scripts</li>
+                    <li>Avoid having to support multiple browsers with multiple home/site pages (code forking)</li>
+                    <li>Much less upkeep (only one source to update)</li>
+                </ul>
+
+
+
+                <h3>Moving Forward</h3>
+                <ul>
+                    <li>HTML5: utilize the new tags to further increase semantic meaning of our web pages</li>
+                    <li>The better your HTML elements, classes and IDs, the easier it will be to manipulate them with advanced frameworks such as jQuery</li>
+                </ul>
+            </div>
+
+            <h2>Standards: file and folder naming</h2>
+            <div class="contblock">
+                There are a few things that bear remembering:
+                <ul>
+                    <li>
+                        file and folder names should <strong>NOT</strong> contain:
+                        <ul>
+                            <li>
+                                capital letters
+                            </li>
+                            <li>
+                                spaces
+                            </li>
+                            <li>
+                                special characters: <strong>! @ # $ % ^ &amp; * ( ) + { } [
+                                ] : ; " &lt; &gt; ? |</strong> etc...
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        acceptable non-alphanumeric characters: <strong>.  _  -  ~</strong>
+                    </li>
+                    <li>
+                        simple default page: <code>index.htm</code>, <code>index.html</code> or <code>index.shtml</code> (or whatever your server default is)
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Standards: file management</h2>
+            <div class="contblock">
+                <ul>
+                    <li>including an <code>index.html</code> file in every folder on your server will ensure users cannot go snooping around your filesystem. the index.html file can be a blank HTML page if you like, as long as the user does not see a list of files when they request a folder </li>
+                    <li>browser caching can reduce excessive request/response transactions between client and server. however, some browsers may cache things like the CSS, so if the styles have changed since caching the client may not get the latest styles.
+                        <ul>
+                            <li><code>Ctrl + F5</code> (<code>Cmd + F5</code> for Mac) will force a page reload, but what if you users don't think to do so?</li>
+                            <li>if a file name has changed, the browser will have to make a new request from the server. versioning your file names will ensure users always have the latest version of any file (for example <code>styles_1.0.css, styles_1.1.css, styles_1.2.css, styles_2.0.css</code> etc)</li>
+                        </ul></li>
+                    <li>if there are files/pages on your server no longer being used, be sure to either remove them or locate them in a place where users are not going to accidentally find them</li>
+                </ul>
+            </div>
+
+            <h2>Semantic Markup</h2>
+            <div class="contblock">
+
+                <h3>What is Semantic Markup?</h3>
+                <ul>
+                    <li>The practice of organizing your content into a structured hierarchy</li>
+                    <li>Using appropriate tags for the content</li>
+                    <li>H1 ... 6 tags for summary headings</li>
+                    <li>UL tags for unsorted, unranked, related points</li>
+                    <li>OL tags for sorted, ranked, related points</li>
+                    <li>Paragraph tags instead of double BR tags</li>
+                    <li>CSS instead of FONT</li>
+                    <li>HTML tables used for semantic value (tabular data), not for layouts</li>
+                    <li>Key: Separate Content (HTML) from Presentation (CSS)</li>
+                </ul>
+
+                <h3>Building Content Relationships</h3>
+                <ul>
+                    <li>Use appropriate tags for headings, content, sub-content, lists</li>
+                    <li>This builds a relationship that descends from the title of the page</li>
+                    <li>Each section is a discrete piece of information</li>
+                    <li>Headings are related to following paragraphs</li>
+                    <li>Citations, quotes, code samples can be contextualized by nearest heading</li>
+                </ul>
+
+                <h3>Logical vs. Physical Styles</h3>
+                <ul>
+                    <li>Tend to display identically in browsers, but are fundamentally different</li>
+                    <li>Physical styles define what content <em>looks like</em></li>
+                    <li>Logical styles define what content <em>is</em></li>
+                    <li>Logical styles are important for screen readers, physical styles are not</li>
+                    <li>Given a choice, logical styles are usually preferred</li>
+                    <li>Some physical styles:
+                        <ul>
+                            <li><code>b</code> - Bold</li>
+                            <li><code>i</code> - Italic</li>
+                            <li><code>s</code> - Strikethrough</li>
+                            <li><code>u</code> - Underline</li>
+                        </ul></li>
+                </ul>
+
+                <h3>Logical Styling</h3>
+                <ul>
+                    <li>Best way to markup content for long-term usage</li>
+                    <li>Use CSS to change style (and some behaviour)</li>
+                    <li>Use DOM to change behaviour (via scripting)</li>
+                    <li>Requires thinking ahead</li>
+                    <li>Examples of logical styles:
+                        <ul>
+                            <li><code>code</code> - <code>Code sample</code></li>
+                            <li><code>kbd</code> - <kbd>Keyboard entry</kbd></li>
+                            <li><code>samp</code> - <samp>Programming sample</samp></li>
+                            <li><code>var</code> - <var>Variable</var></li>
+                            <li><code>cite</code> - <cite>Citation</cite></li>
+                            <li><code>dfn</code> - <dfn>Definition</dfn></li>
+                            <li><code>abbr</code> - <abbr title="Abbreviation definition here">Abbreviation</abbr></li>
+                            <li><code>acronym</code> - <acronym title="This is an acronym">Acronym</acronym></li>
+                            <li><code>del</code> - <del>Deleted text</del></li>
+                            <li><code>ins</code> - <ins>Inserted text</ins></li></ul></li>
+                </ul>
+
+                <h3>Key Advantages Of Semantic Content</h3>
+                <ul>
+                    <li>Content is relational - context can be determined easily</li>
+                    <li>Extracting important pieces of information is simple (CITE or CODE tags for example)</li>
+                    <li>Search engine optimization  (SEO)</li>
+                    <li>Syndication  (RSS)</li>
+                    <li>Big win for frameworks such as jQuery (again)!</li>
+                    <li>Screen reader friendly</li>
+                    <li>Separates style (CSS) from structure (HTML), making it easier to maintain</li>
+                </ul>
+
+            </div>
+
+            <h2>Standards Resources</h2>
+            <div class="contblock">
+                <ul>
+                    <li>WASP <a href="http://www.webstandards.org/">http://www.webstandards.org/</a></li>
+                    <li>W3C <a href="http://www.w3c.org/">http://www.w3c.org</a></li>
+                    <li>W3C Sites <a href="http://www.w3csites.com/">http://www.w3csites.com/</a></li>
+                </ul>
+            </div>
+
+            <h2>Summary</h2>
+            <div class="contblock">
+
+                <h3>Prerequisites</h3>
+                <p>While there is plenty of individual homework to do, there will be several team oriented exercises in this class. Be sure to build pages you are proud of, and be ready and willing to share the them with your colleagues. All COMP1950 students must verify they are capable of connecting to their course webspace via FTP. Students are expected to be fluent with the use of FTP, so be sure to remember your connectivity information.</p>
+                <h3>COMP1950 Best Practices</h3>
+                <ul>
+                    <li>get acquainted with a browser based developer tool(s). they are crucial to making your development more efficient and effective</li>
+                    <li>practice standards based development at all times:
+                        <ul>
+                            <li>encourage user trust by building pages that are coherent and well presented</li>
+                            <li>facillitate accessibility options for the disabled</li>
+                            <li>HTML: used for describing the <strong>semantics</strong> and <strong>structure</strong> of page content</li>
+                            <li>CSS: used for applying <strong>presentation</strong> rules (colors, fonts, content location/position)</li>
+                            <li>Javascript: enables page <strong>behavior</strong>, response to user interactions</li>
+                        </ul>
+                    </li>
+                    <li>recognize that only structuraly valid code can be expected to operate predictably
+                        <ul>
+                            <li><a href="http://validator.w3.org/">W3C HTML validator</a></li>
+                            <li><a href="http://jigsaw.w3.org/css-validator/">W3C CSS validator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>...and yes, there will be a practical, open book quiz at the start of session #2! (hint: practice using a browser based diagnostic tool like we did during todays exercise)</p>
+            </div>
+
+            <h2>Homework</h2>
+            <div class="contblock">
+
+                <ul>
+                    <li>due to be published to the class server by midnight, the night before the next class</li>
+                    <li><a href="/_shared_resources_1950/downloads/comp1950_homework01.pdf">download the homework</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
 </section>
 <section class="active">
 
     <div class="lectureImg"></div>
     <h1>02 | html5</h1>
     <ul>
-        <li title="Very not easy quiz!! You better study for this one!!">Quiz #1</li>
         <li>Markup Languages: HTML, XHTML, HTML5</li>
         <li>HTML5 semantics</li>
         <li>HTML5 features</li>
         <li>CSS review</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+        <div id="maincont">
+            <h1>lecture two: HTML5</h1>
+            <h2>Agenda</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Quiz #1</li>
+                    <li>Markup Languages: HTML, XHTML, HTML5</li>
+                    <li>HTML5 semantics</li>
+                    <li>HTML5 features</li>
+                    <li>CSS review</li>
+                </ul>
+            </div>
+
+            <h2>Hypertext Markup Language</h2>
+            <div class="contblock">
+                <p>
+                    It all starts here in one form or another: HTML
+                </p>
+                <ul>
+                    <li>What started as a language defined by <a href="http://www.w3.org/MarkUp/SGML/">SGML</a> <em>(Standard Generalized Markup Language)</em>, HTML is used to mark up billions of pages, making up the bulk of the web.</li>
+                    <li>From a common origin, 3 distinct version have emerged:
+                        <ol>
+                            <li><strong>HTML 1 - 4.01</strong>: This was developed in rapid succession in the 1990's</li>
+                            <li><strong>XHTML 1, 1.1, 2</strong>: A stricter version, created as an answer to the loose development of HTML</li>
+                            <li><strong>HTML5 </strong>- a reaction to the draconian ruleset proposed by the W3C for the future of MLs beyond XHTML 1.1</li>
+                        </ol></li>
+                </ul>
+            </div><!-- END .contblock -->
+
+            <h2>HTML Created</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Late 1991, Tim Berners-Lee releases the first iteration of what would become HTML 2.0 (there was no real 1.0+)</li>
+                    <li>HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template</li>
+                    <li>Over the next decade, various additions, improvements and changes are introduced</li>
+                    <li>The last official specification was the service release of HTML 4.01 in December 1999</li>
+                    <li>Initially used for documents and a place for the technically inclined, the web did not have the international pervasiveness it does today</li>
+                    <li>Most developers were new to the language and there were no real classes in it</li>
+                    <li>People had to learn as they went along</li>
+                    <li>A lot of early sites are poorly designed</li>
+
+                </ul>
+                <h4>HTML 4.01 template</h4>
+			<textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+            </div>
+
+
+            <h2>HTML on the loose!</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Despite it's reputation as a loose language, HTML 4.01 can be written strict just like XHTML and HTML5 can</li>
+                    <li>The problem was not <em>entirely</em> with the language or the authors.  It was with the <em>browsers</em>.</li>
+                    <li>Browser manufacturers created User Agents that would read code, interpret it, fix any mistakes and render a page, without any visible errors.</li>
+                    <li>It was this that led to coders exploiting problems in browsers and creating pages that broke when new specs or updated User Agents (browsers) came out</li>
+
+                    <li>Okay, so now there is a problem. <strong>Millions</strong> of pages are being produced with sloppy code because the UAs let it happen</li>
+                    <li>The web is becoming filled with Tag Soup that makes it hard to index, with search tools having to trust things like META keywords and descriptions</li>
+                    <li>A better solution is required: Get Strict!</li>
+                </ul>
+
+            </div>
+
+
+            <h2>Attempting to fix the problem</h2>
+            <div class="contblock">
+                <h3>Moving on to XHTML1</h3>
+                <ul>
+                    <li>After years of <em>HTML</em> development, 4.01 became the "Last Official Release"</li>
+                    <li>The Web Working Group had taken a look at XML (Extensible Markup Language) and liked what they saw: a requirement for valid markup in order for an XML application to work</li>
+                    <li>Why not take the ruleset from XML (lower case attributes, everything in quotes, close every tag) and apply it to HTML? Yay!</li>
+                    <li>That should fix everything, right?</li>
+                    <li>Coding wasn't <em>actually</em> fixed by the introduction of XHTML. Fixes were <em>suggested</em> by the specification, but most browsers would render the page anyway.</li>
+                    <li>This is because 99% of XHTML pages are reporting their MIME type as: <code>text/html</code></li>
+                    <li>To get pages to render using the appropriate DOCTYPE of XHTML, pages would have to be delivered with the MIME type of <code>application/xhtml+xml</code></li>
+                    <li>Using that MIME type, however, brought with it a rather dire proviso:</li>
+                    <li>The error handling specified in XHTML 1.1 meant <strong>all errors will cause the browser to cease rendering</strong></li>
+                    <li>Yes, you read that correctly. That means <strong>any</strong> error will throw an warning to the user and the page will not be shown</li>
+                    <li>Try to imagine the Web actually working in this way</li>
+                    <li>Why was this done? Because the developers of XHTML wanted to force strict coding rules so that the Web could be seen as a giant application.  Reliable code on every page meant you could use the data anywhere</li>
+                </ul>
+            </div>
+
+
+            <h2>Tighten up!</h2>
+
+            <div class="contblock"><ul>
+                <li>X = eXtensible</li>
+                <li>X = XML related</li>
+                <li>A reformation of HTML reformulated in XHTML</li>
+                <li>First major update to HTML since the 4.01 specification was released in 1999.</li>
+                <li><strong>Note</strong> - <em>XHTML Development has ceased entirely. More on that later</em></li>
+
+                <li>Better, more predictable coding patterns</li>
+                <li>"verifiable" or "well-formed" code can be produced</li>
+                <li>Forces a higher standard of HTML</li>
+                <li>Porting to HTML5 is easy (if you also observe <strong>semantic</strong> guidelines)</li>
+            </ul>
+
+            </div>
+
+            <h2>What is different about XHTML?</h2>
+            <div class="contblock"><ul>
+                <li>Almost identical to HTML 4.01, but a much stricter syntax in XHTML</li>
+                <li>Technically: <strong>XHTML is just HTML defined as an XML application.</strong></li>
+
+            </ul>
+                <h3>XHTML Rules:</h3>
+
+                <ul>
+                    <li>All elements must be properly nested
+                        <ul>
+                            <li>This is not valid: &lt;p&gt;&lt;b&gt;Bolded Text&lt;/p&gt;&lt;/b&gt;</li>
+                            <li>This can be a problem with things like Lists &lt;ol&gt; and &lt;ul&gt;.</li>
+
+                            <li>Especially when closing the List Item &lt;li&gt; tag that contains the &lt;ul&gt; or &lt;ol&gt; tag.</li>
+                        </ul></li>
+
+                    <li>All tags must close
+                        <ul>
+                            <li>Example: &lt;p&gt;Some text here&lt;/p&gt;</li>
+
+                            <li>Empty Elements are closed as well: &lt;br /&gt; or &lt;img src="#" /&gt;</li>
+                            <li>An extra space is required before the slash to work with all browsers.</li>
+                        </ul></li>
+
+                    <li>All tag names must be in lower case
+                        <ul>
+                            <li>&lt;Img Src="some_image.gif"&gt; is not valid</li>
+
+                        </ul></li>
+
+                    <li>Attribute names are always in lower case
+                        <ul>
+                            <li>&lt;p ALIGN="center"&gt; should be  <code>&lt;p align="center"&gt; </code></li>
+                        </ul></li>
+
+                    <li>All attributes must be quoted
+                        <ul>
+                            <li>&lt;body bgcolor=black&gt; will not work, you need: <code>&lt;body bgcolor="black"&gt;</code></li>
+
+                        </ul></li>
+
+                    <li>Attributes cannot be minimized
+                        <ul>
+                            <li>&lt;input type="checkbox" checked&gt; cannot be used. The valid code is: &lt;input type="checkbox" checked="checked"&gt;</li>
+                        </ul></li>
+
+
+                    <li>Name Attribute is no longer used (except with forms). Replace "name" with "id".
+                        <ul>
+                            <li><code>&lt;img src="picture.gif" name="myimage" /&gt;</code> will not validate. Use <code>id="myimage"</code> instead.</li>
+
+                        </ul></li>
+
+
+                    <li>Mandatory Elements: Every XHTML document <strong>must have</strong> these elements:
+                        <ul>
+                            <li><code>&lt;html&gt;</code></li>
+
+                            <li><code>&lt;head&gt;</code></li>
+                            <li><code>&lt;title&gt;</code></li>
+                            <li><code>&lt;body&gt;</code></li>
+                            <li>The <code>&lt;!DOCTYPE&gt;</code> declaration <em>must</em> be there, but it is <em>part</em> of the document itself rather than an element of the document.</li>
+
+                        </ul></li>
+
+
+                    <li>Documents must be well-formed
+                        <ul>
+                            <li>The document must conform to all of the above rules</li>
+                        </ul></li>
+                    <li>Optional XML declaration
+                        <ul>
+                            <li>Not <em>required</em>, but good practice:</li>
+
+                            <li><code>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</code></li>
+                        </ul></li>
+
+                    <li>Optional Element: An XHTML document should also declare the type and character encoding in the head section to ensure the server sends the correct content-type header: <br>
+                        <code>&lt;meta http-equiv="Content-Type" content="text/html" charset="UTF-8"&gt;</code>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <h2>XHTML Documents</h2>
+            <div class="contblock"><h3>DTD: Document Type Definition</h3>
+                <ul>
+                    <li>A description of the document, and the legal definitions that fall within it. </li>
+                    <li>The DTD defines the syntax of the page in SGML.</li>
+
+                    <li>This translates to: Because XHTML is just the application of XML to
+                        HTML, you need to tell the browser (the interpreter) how to interpret
+                        all of the code on the page.</li>
+                </ul>
+            </div>
+
+            <h2>Three kinds of DTD:</h2>
+            <div class="contblock"><h3>Strict</h3>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></li>
+
+                    <li>Mostly used for technical documents or content that requires very little markup.</li>
+                    <li>This is the original intention of the W3C"s recommendation.</li>
+                </ul>
+
+
+                <h3>Transitional (most common)</h3>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></li>
+
+                    <li>This is by far the most common DTD in use today</li>
+                    <li>Supports most HTML features</li>
+                    <li>Was created to provide a middle ground for users trying to convert from HTML to XHTML in stages.</li>
+                </ul>
+
+
+
+                <h3>Frameset</h3>
+
+                <ul>
+                    <li><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</code></li>
+                    <li>Same as Transitional, but allows the use of frames</li>
+                </ul>
+                <h4>XHTML 1.0 template</h4>
+			<textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+            </div>
+
+
+            <h2>XHTML2</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Between 2002 and 2006, a significant amount of development was attempted for XHTML2</li>
+                    <li>An early decision was to abandon backward compatibility with XHTML1 and HTML4.x leading to significant controversy</li>
+                    <li>What does that <em>mean</em>? "abandon backward compatibility"?
+                        <ul>
+                            <li>Deprecated tags would no longer work</li>
+                            <li>All "old" code would have to be updated if you wanted to deliver XHTML</li>
+                            <li>Browsers would have even more work to do when rendering pages</li>
+                        </ul>
+
+                    </li>
+                    <li>Some additional changes:
+                        <ul>
+                            <li>Forms will now be controlled by XForms, a new system that allows for error checking, preformatted input fields and more</li>
+                            <li>DOM events will be replaced with XML Events - a system for registering and handling events within an XML document, requiring very strict coding standards</li>
+                            <li>Lists for Navigation can be created with a new <code>n1</code> tag</li>
+                            <li>Any element can have <code>href</code> or <code>src</code> attributes, allowing for links and/or image replacement</li>
+                        </ul>
+                    </li>
+                    <li>Some of the more contentious issues were split out into modules to be worked on by the W3C XHTML Working Group</li>
+                    <li>At one point, a question was asked:
+                        <ul>
+                            <li>Shouldn't we be taking into account the billions of pages that are already out there, make the upgrading part easy and focus on the kinds of things people are actually doing today?</li>
+                        </ul>
+
+                    </li>
+                    <li>Maybe not <em>exactly</em> that, but close</li>
+                    <li>A vote was called and the motion was defeated.  But the people who thought it was a good idea wanted to move forward</li>
+                    <li>As a result - they created the WHATWG (Web Hypertext Application Technology Working Group) and began working on a competing specification, which was originally called Web Applications 1.0</li>
+                </ul>
+            </div>
+
+            <h2>HTML5</h2>
+            <div class="contblock">
+                <h3>Arising out of the morass</h3>
+                <ul>
+                    <li>HTML5 was born out of frustration with languishing XHTML2 development</li>
+                    <li>The last official spec of XHTML had come in 2000 and by 2005, there was little forward movement, with the development bogged down in committees and problems reaching consensus</li>
+                    <li>There were two distinct camps: Strict and Non Strict (overly simplified terms)</li>
+                    <li>After a series of decisions against a more forgiving, backward compatible version, a number of HTML Working Group members created their own group: WHATWG</li>
+                    <li>After 3 years, Web Applications 1.0 gained considerable momentum when Mozilla, Apple and Opera joined the Working Group and requested that it become part of the W3C's HTML Working Group </li>
+                    <li>In 2007, the W3C HTML working group adopted the development, renamed it HTML5 (a successor to HTML 4.01) and released a Public Working Draft in 2008</li>
+                    <li><del>As of today, HTML5 is still a <a href="http://www.whatwg.org/specs/web-apps/current-work/">Draft Recommendation</a> expected to cease accepting new proposals in late 2014.<del></del></del></li>
+
+                    <li>As of October 28, 2014, <a href="http://www.w3.org/TR/html5/">HTML5 is the official W3C recommendation</a></li>
+                    <li>Broswer vendors are now expected to fully support HTML5 in new browsers they produce.</li>
+                    <li>Not all browser vendors are up to date yet, and, much more notably, not all internet users will be using new, HTML5 compliant browsers</li>
+                    <li>Support for some of HTML5s features is already available in several browsers, so if applied with care, developers may begin writing HTML5 now.</li>
+                </ul>
+                <h4>HTML 5 template</h4>
+			<textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+            </div>
+            <h1>HTML5</h1>
+
+            <h2>HTML5:  What is It?</h2>
+            <div class="contblock">
+                <h3>The basics of HTML5</h3>
+                <p>HTML5 is more evolutionary then revolutionary. The bulk of previous HTML elements and attributes are maintained, with a few deprecations, and several additions.</p>
+                <ul>
+                    <li>Some of the most important parts of HTML5 are:
+                        <ul>
+                            <li>Ultra simple Doctype: <code>&lt;!DOCTYPE html&gt;</code></li>
+                            <li>Specifies how browsers should behave with imperfect code</li>
+                            <li>XML can be included as a markup language from within HTML5</li>
+                            <li>Ability to embed <a href="http://www.w3.org/Math/">MathML</a> or <a href="http://www.w3.org/Graphics/SVG/">SVG</a> elements</li>
+                            <li>Standardized Javascript API increases client side script compatibility across browsers</li>
+                            <li>Backwards compatible - older versions of HTML can effectively be updated by simply changing the doctype to HTML5</li>			<li>Guiding principles: Enhance semantic coding, Support existing content, Pave the cowpaths</li>
+                        </ul>
+                    </li>
+                    <li>Some of these seem insignificant, but they are great strides forward</li>
+                </ul>
+            </div>
+
+            <h2>HTML5: Paving the Cowpaths</h2>
+            <div class="contblock">
+
+                <p>Common developer practices have been simplified</p>
+                <ul>
+                    <li>Finally a DOCTYPE we can all remember:<br>
+                        <code>&lt;!DOCTYPE html&gt;</code>
+                    </li>
+                    <li>Declaring the character encoding is easier:<br>
+                        <code>&lt;meta charset="utf-8"&gt;</code>
+                    </li>
+                    <li>When linking to external stylesheets the <code>type</code> attribute is not required:<br>
+                        <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+                    </li>
+                    <li>When embedding CSS the <code>type</code> attribute is not required:<br>
+                        <code>&lt;style&gt;&lt;/style&gt;</code>
+                    </li>
+                    <li>Including javascripts is simplified as well (<code>type</code> attribute is not required)<br>
+                        <code>&lt;script src="javascripts.js"&gt;&lt;/script&gt;</code>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>HTML5: Enhanced Semantic Coding</h2>
+            <div class="contblock">
+                <p>It is crucial for all HTML content to be <a href="semantics.html">semantically marked up</a>. This is hohw browsers, search engines, and screen readers make sense of online content.</p>
+                <p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:</p>
+                <ul>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></code> is a tag representing a document or application section. most every section should include a heading (h1-h6) to summarize its contents. a <code>section</code> likely contains <code>article</code>(s), possibly <code>aside</code>s or even sub-<code>section</code>s</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">&lt;article&gt;</a></code> is an independent piece of content in a document (it could stand alone if removed from the page). an <code>article</code> might be a blog post, forum thread, news story, collection of product information, etc</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">&lt;aside&gt;</a></code> is for content "only slightly" related to the main page content. <code>aside</code>s fill the role of a sidebar. if the content could be removed without reducing the meaning of the main content of the HTML document, then use an <code>aside</code></li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">&lt;footer&gt;</a></code> are for the header or footer of a page</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">&lt;nav&gt;</a></code> represents an area for navigation</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">&lt;main&gt;</a></code> used for containing content that is focused on the central topic of the page. this content is usually unique to the page, and not shared by other pages (main will usually NOT contain navigations, footers, sidebars, etc)</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> will likely contain an <code>img</code> or graphic. self-contained content (could usually be removed from the page and stand on its own). allows for captioning of embedded content like an image graphic or video. if you want to associate a caption, add a <code>figcaption</code> child</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">&lt;figcaption&gt;</a></code> used as first or last child of <code>figure</code> to define the caption or legend for a figure</li>
+
+
+
+                </ul>
+
+                <p>These represent some big changes in HTML, allowing for more flexibility in coding and specifying content. Many of these will replace and reduce the need for many <code>div</code> tags. eg: instead of the typical <code>&lt;div id="header"&gt;</code>, use <code>&lt;header&gt;</code>.</p>
+            </div>
+
+
+
+            <h2>HTML5 Exercise #1</h2>
+            <div class="contblock">
+                <p>Apply some of the new HTML5 tags to an existing web page. Use them to better semantically structure the content.</p>
+                <p><a href="/_shared_resources_1950/downloads/session02_exercise01.zip">Download and uncompress the exercise files</a> (.zip).</p>
+                <p>  Convert the .html document from XHTML 1.0 into HTML5: Update the <code>DOCTYPE</code>, change some of the generic <code>div</code> structural tags into optimal semantic HTML5 tags, update the CSS selectors accordingly, and demonstrate it to your instructor when complete.</p>
+                <p>Try adding <code>figure</code>s with <code>figcaption</code>s to the images. use the value from each image's <code>alt</code> attribute as the caption. you will need to adjust the CSS on the images (<code>.thumb</code>) as well as adding styles of your own to make it presentable.</p>
+                <p><a href="/_shared_resources_1950/downloads/session02_exercise01_sample.zip">Download a sample solution</a> (.zip).</p>
+
+            </div>
+
+
+            <h2>HTML5 Content Models</h2>
+            <div class="contblock">
+                <p>Pre-HTML5, there were basically two categories of tags: inline and block. HTML5 intoduces a more nuanced set of categories that allow for greater semantic sectioning of content. The content model will help the browser to determine the semantics of your content.</p>
+                <h3>Content Models</h3>
+                <ul>
+                    <li>text-level content: most inline tags</li>
+                    <li>grouping content: most block tags</li>
+                    <li>forms: all the form widgets and related tags</li>
+                    <li>embedded content: video, audo, canvas</li>
+                    <li>sectioning content: new structural, semantic options</li>
+                </ul>
+                <h3>Sectioning Content</h3>
+                <p>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></code> tag can be used to semantically group content. It can remove ambiguity when a page is being processed by the browser, a screen reader, or search engine.</p>
+                <p>For example, imagine you have created the following code:</p>
+	<textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;h1&gt;The Really Big Show&lt;/h1&gt;
+&lt;h2&gt;Cities&lt;/h2&gt;
+&lt;p&gt;We will be performing in several cities this year. Be sure to quit your job and travel the world to see all our shows!&lt;/p&gt;
+&lt;h3&gt;Toronto&lt;/h3&gt;
+&lt;p&gt;Center of the Canadian Universe.&lt;/p&gt;
+&lt;h3&gt;Vancouver&lt;/h3&gt;
+&lt;p&gt;On the left coast.&lt;/p&gt;
+&lt;h3&gt;Tokyo&lt;/h3&gt;
+&lt;p&gt;Land of the rising sun.&lt;/p&gt;
+&lt;small&gt;Accommodations not provided&lt;/small&gt;
+	</textarea>
+                <p>Since content that follows a heading is presumed to be associated with that heading, the code above carries plenty of semantic value already. But, if the <code>small</code> tag's content is intended to apply to all cities, a browser has no way of knowing that. It will instead assume the <code>small</code> tag is associated with the preceding heading (<code>&lt;h3&gt;Tokyo&lt;/h3&gt;</code>)</p> Use the <code>section</code> tag to explicitly demarcate the start and end of the related content:<p></p>
+	<textarea style="width:90%;height:230px;" rows="10" cols="50">&lt;h1&gt;The Really Big Show&lt;/h1&gt;
+&lt;section&gt;
+	&lt;h2&gt;Cities&lt;/h2&gt;
+	&lt;p&gt;We will be performing in several cities this year. Be sure to quit your job and travel the world to see all our shows!&lt;/p&gt;
+	&lt;h3&gt;Toronto&lt;/h3&gt;
+	&lt;p&gt;Center of the Canadian Universe.&lt;/p&gt;
+	&lt;h3&gt;Vancouver&lt;/h3&gt;
+	&lt;p&gt;On the left coast.&lt;/p&gt;
+	&lt;h3&gt;Tokyo&lt;/h3&gt;
+	&lt;p&gt;Land of the rising sun.&lt;/p&gt;
+&lt;/section&gt;
+&lt;small&gt;Accommodations not provided&lt;/small&gt;
+	</textarea>
+                <p>This new sectioning will inform the browser that the <code>small</code> is associated with the <code>h1</code></p>
+                <p>In HTML5, each piece of sectioned content has its own self-contained outline. This means you wont need to worry as much about which level heading tag to use. You can use an <code>h1</code> inside a section and it will be treated as the heading of the section, and have lesser semantic impact than an <code>h1</code> that is at a higher level.</p>
+	<textarea style="width:90%;height:300px;" rows="10" cols="50">&lt;h1&gt;The Really Big Show&lt;/h1&gt;
+&lt;section&gt;
+	&lt;h1&gt;Cities&lt;/h1&gt;
+	&lt;p&gt;We will be performing in several cities this year. Be sure to quit your job and travel the world to see all our shows!&lt;/p&gt;
+	&lt;section&gt;
+		&lt;h1&gt;Toronto&lt;/h1&gt;
+		&lt;p&gt;Center of the Canadian Universe.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section&gt;
+		&lt;h1&gt;Vancouver&lt;/h1&gt;
+		&lt;p&gt;On the left coast.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section&gt;
+		&lt;h1&gt;Tokyo&lt;/h1&gt;
+		&lt;p&gt;Land of the rising sun.&lt;/p&gt;
+	&lt;/section&gt;
+&lt;/section&gt;
+&lt;small&gt;Accommodations not provided&lt;/small&gt;
+	</textarea>
+
+            </div>
+
+
+
+            <h2>Functional/behavioral HTML5</h2>
+            <div class="contblock">
+                There is a list of additional tags that will continue to refine what will be possible with HTML:
+                <ul>
+                    <li><code>audio, video, embed, mark, meter, progress, time, canvas, command, datagrid, details, datalist, keygen, bb, output, ruby</code></li>
+                    <li>There are a huge list of additional attributes that have changed, allowing for considerable agility with web development</li>
+                    <li>There have also been a few elements removed, such as: <code>&lt;big&gt;, &lt;font&gt;, &lt;strike&gt;</code>,  and a few more. Developers should use CSS instead of these deprecated tags.</li>
+                    <li>There are also a large number of attributes that have been removed, such as: <code>align, bgcolor, border, height, size, type, width</code> and more. Developers should use CSS instead of these deprecated attributes.</li>
+                </ul>
+
+                <p>Form elements are undergoing several improvements. Not as well supported as the elements described above, they are nonetheless very powerful. The <code>&lt;input&gt;</code> form element features several useful new attributes:</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Form Attributes</a></p>
+                <ul>
+                    <li><code>placeholder="value"</code>: prepopulates field with data</li>
+                    <li><code>autofocus="autofocus"</code>: sets the input to have cursor focus</li>
+                    <li><code>required="required"</code>: ensures field is filled in before submission</li>
+                    <li>There are also several new <code>&lt;input&gt;</code> type attribute variants:
+                        <ul>
+                            <li><code>type="email"</code>: emails</li>
+                            <li><code>type="url"</code>: web addesses</li>
+                            <li><code>type="date"</code>: calendar popup</li>
+                            <li><code>type="tel"</code>: telephone numbers</li>
+                            <li><code>type="search"</code>: formats text input as search input</li>
+                            <li><code>type="color"</code>: color picker popup</li>
+                            <li><code>type="range"</code>: sliding scales</li>
+                        </ul>
+                    </li>
+
+                    <li>Includes a javascript browser API (Application Programming Interface), increasing interoperability of scripting</li>
+                    <li>Some of the most anticipated additions are <code>&lt;canvas&gt;</code>,  <code>&lt;audio&gt;</code>,  <code>&lt;video&gt;</code></li>
+                    <li>The <code>&lt;canvas&gt;</code> tag will allow for 2D drawing of considerable power</li>
+                    <li><code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> will allow for direct embedding of multimedia elements in your HTML documents</li>
+
+                </ul>
+            </div>
+
+            <h2>HTML5 Exercise #2</h2>
+            <div class="contblock">
+                <p>Experiment with new HTML5 form features.</p>
+                <p><a href="/_shared_resources_1950/downloads/session02_exercise02.zip">Download and unpack the exercise files</a>  (.zip).  Add several of the new HTML5 inputs to the form. Test the results in every browser you have available. Which features seem to be well supported? Which ones are poorly supported? Take note of how a browser will render some of the more specialized inputs when it doesnt recognize the HTML5.</p>
+            </div>
+
+
+            <h2>HTML5 Today</h2>
+            <div class="contblock">
+                <h3>Is it time to start using HTML5?</h3>
+                <ul>
+                    <li>Yes and No</li>
+                    <li>Try the <a href="http://html5test.com/">HTML5Test</a>. Compare all the web browsers! Try it on your smartphone as well! Be aware of what HTML5 is or isn't currently supported.</li>
+                    <li>One of the great things about HTML5 is the ability to use tags from previous MLs</li>
+                    <li>Tags are therefore interpreted and rendered correctly</li>
+                    <li>How about <strong>new</strong> tags? (audio, video, article, aside, etc)</li>
+                    <li>These may not be rendered correctly due to older, non-compliant browsers not having an idea how to interpret them</li>
+                    <li>What happens when you use an unknown element... say: <code>&lt;finnegan&gt;My Dog&lt;finnegan&gt;</code>
+                        <ul>
+                            <li>If the browser is Firefox, Chrome, Safari, Opera: inline style</li>
+                            <li>If the browser is IE: no style at all, all child elements are treated as siblings instead(?!)</li>
+                            <li>So, if you have an <code>&lt;article&gt;</code> tag, IE will strip everything out of it and create them as sibling elements. Awesome.</li>
+                        </ul></li>
+                    <li>With the huge amount of IE out there, it might be problematic to start working with HTML5</li>
+                    <li>However, there is a workaround and it is really easy:
+                        <ul>
+                            <li><code>&lt;script&gt;document.createElement("article");&lt;/script&gt;</code></li>
+                            <li>This creates an element called <code>&lt;article&gt;</code> which the browser (IE, in this case) can understand and style appropriately</li>
+                        </ul>
+                    </li>
+                    <li>Creating an entry for every element can get a bit heavy, so you can use the <a href="https://github.com/aFarkas/html5shiv">HTML5shiv</a> script written by <a href="http://remysharp.com/">Remy Sharp</a>, an HTML5 guru.</li>
+                    <li>Add the shiv to the head section of your HTML5 pages. If you dont download your own copy, you can use a CDN.</li>
+                    <li>Insert a coded-comment that will apply the shiv ONLY with IE browsers less than version 9:
+	<pre><code>&lt;!--[if lt IE 9]&gt;
+        &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+        &lt;![endif]--&gt;
+    </code></pre>
+                    </li>
+
+                    <li>Because HTML5 understands both HTML4 and XHTML tags, you can "use" HTML5 today</li>
+                </ul>
+            </div>
+
+
+            <h2>HTML5 Exercise #3</h2>
+            <div class="contblock">
+                <p>Update the HTML5 document you worked on for exercise #1 to include the  <a href="https://github.com/aFarkas/html5shiv">HTML5shiv</a>. Test your page in Internet Explorer to ensure that it recognizes (and applies CSS styles to) the new HTML5 tags.</p>
+            </div>
+
+
+
+            <h1>CSS fundamentals</h1>
+
+            <h2>CSS review</h2>
+            <div class="contblock">
+                <ul>
+                    <li>a CSS rule defines what the HTML should look like and how it should behave in the browser window</li>
+                    <li>parts of a CSS rule:
+
+                        <ul>
+                            <li><strong>selector {property: value;}</strong> = rule</li>
+                            <li><strong>selector</strong> - can be HTML, class or ID</li>
+
+                            <li><strong>{property: value;}</strong> = declaration</li>
+                            <li><strong>properties</strong> identify what is being defined: font-family, font-weight, font-size, color, etc.</li>
+                            <li><strong>values</strong> are assigned to define the nature of the property: verdana, bold, 16pt, green, etc.</li>
+                        </ul>
+                    </li>
+                    <li>three basic types of CSS selectors
+                        <ol>
+
+                            <li><strong>HTML selector</strong> - the HTML selector (P, H3, etc.) is used to redefine how the tag displays:<br>
+                                <strong>p {font: bold 16pt verdana;}</strong>
+                            </li><li><strong>Class</strong> - a "free agent" rule that can be applied to any tag at your discretion:<br>
+                            <strong>.bigText {font: bold 48pt verdana;}</strong>
+                        </li><li><strong>ID</strong> - work like class selectors, but usually apply to only one element on the page:<br>
+
+                            <strong>#navbar {position: absolute; margin-top: 20px;}</strong>
+                        </li></ol></li>
+
+                    <li>rules are setup in one of three places:
+                        <ul>
+                            <li><strong>in an HTML tag:</strong> in the body of the document to affect one tag only; this is called an <strong>inline</strong> rule</li>
+                            <li><strong>in the head of a document</strong> to affect an entire web page; called an <strong>embedded</strong> rule</li>
+
+                            <li><strong>in an external document</strong> that is then linked or imported into your HTML page(s); called an <strong>external</strong> rule</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <h2>Applying style sheets to web pages</h2>
+            <div class="contblock">
+                <h4>Inline Style</h4>
+                <ul>
+                    <li>to set the style for an indivdual HTML tag (i.e., an inline rule), we use the following syntax:<br>
+                        <code>
+                            &lt;h1 style="color: red;"&gt;content&lt;/h1&gt;
+
+                        </code>
+                    </li>
+
+                    <li>in this way we're gaining more control over the display because there's more things we can do with each tag</li>
+                    <li>not a huge departure from HTML though, because we're still using a sort of "attribute/value" system</li>
+
+                </ul>
+                <h4>Embedded Style</h4>
+                <ul>
+
+                    <li>the main use for CSS is to set the styles for an entire document, which is done by adding the following to your HEAD section:<br>
+
+                        <code>
+                            &lt;style type="text/css"&gt; <br>
+
+                            &nbsp;&nbsp;&nbsp;h1 {color: red;}<br>
+                            &lt;/style&gt;
+                        </code>
+                    </li>
+
+                    <li>in effect, isn't much different from adding style to an individual tag; except that you can manage style for ALL H1 tags in document from ONE PLACE</li>
+                </ul>
+                <h4>External Style</h4>
+                <ul>
+                    <li>the major benefit of CSS is the external file: allows you to define all your styles for a site in one document, and link it to all pages</li>
+                    <li>changes to a style can be made once and affect all instances of the style throughout a site</li>
+
+                    <li>setting up an external CSS file is a two step process:
+                        <ol>
+                            <li>first, set up the rules in a separate text document and save it with a .css extension</li>
+                            <li>then, link the document to each page using the &lt;link&gt; tag:<br>
+
+                                <code>
+                                    &lt;head&gt;<br>
+
+                                    &nbsp;&nbsp;&nbsp;&lt;title&gt;document&lt;/title&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="filename.css"&gt;<br>
+                                    &lt;/head&gt;<br>
+                                </code>
+                            </li>
+                        </ol>
+
+
+                    </li>
+                    <li><strong>rel="stylesheet"</strong> defines the link to a stylesheet</li>
+                    <li><strong>href="filename.css"</strong> is the URL for the external file</li>
+
+                </ul>
+            </div>
+            <!--
+            <h2>CSS Review Excercise</h2>
+            <div class="contblock">
+                <p>Demonstrate your understanding of the CSS fundamentals.</p>
+                <p><a href="/1950/downloads/session02_exercise02.zip">download the exercise</a></p>
+            </div>
+            -->
+            <h2>Summary</h2>
+            <div class="contblock">
+                <p>Web pages can be written in HTML5 today, even if not all clients are ready for it. Just be sure to follow best practices to ensure forward and backward compatibility: </p>
+                <h3>Using HTML5</h3>
+                <ol>
+                    <li>Create more semantic documents by using HTML5 tags such as header, footer, etc. </li>
+                    <li>Use <a href="http://html5test.com/">HTML5Test</a> with several different browsers to determine what HTML5 is or isn't currently supported.</li>
+                    <li>Apply the <a href="https://github.com/aFarkas/html5shiv">HTML5shiv</a> to ensure Internet Explorer browsers will recognize the new HTML5 tags</li>
+                    <li><a href="http://validator.w3.org/">Validate your code</a></li>
+
+                </ol>
+                <h3>HTML5 Resources</h3>
+                <ul>
+                    <li><a href="http://www.w3.org/TR/2014/REC-html5-20141028/">W3C HTML5 Complete Reference</a> </li>
+                    <li><a href="http://www.w3schools.com/html/html5_new_elements.asp">New semantic/structural HTML5 Tags</a></li>
+                    <li><a href="http://www.sitepoint.com/html-5-snapshot-2009/">Sitepoint's</a> HTML 5 snapshot</li>
+                    <li>Learn more about specific HTML5 tags:
+                        <ul>
+                            <li><a href="http://html5doctor.com/html5-forms-input-types/">form inputs</a> - several 'intelligent' form inputs can pre-validate form field data before the form can be submitted to the server</li>
+                            <li><a href="http://www.htmlgoodies.com/primers/html/article.php/3920991/HTML5-Primer-How-To-Use-the-Audio-Tag.htm">audio</a> - embed audio files in various formats and let the client browser automatically choose the preferred format</li>
+                            <li><a href="http://www.html5rocks.com/en/tutorials/video/basics/">video</a> - embed video in various formats and let the client browser automatically choose the preferred format</li>
+                            <li><a href="http://diveintohtml5.info/canvas.html">canvas</a> - 2D drawing in real time, in response to user interactions. requires javascript, may not be good for accessibility</li>
+                            <li><a href="http://www.w3schools.com/html/html5_svg.asp">scalable vector graphics (SVG)</a> display vector graphics. unlike <code>canvas</code>, SVGs are static (they cannot change in real time)</li>
+                            <li><a href="http://dglobaltech.com/html5-geolocation-api-demo-and-example/">geolocation</a> - determine, with the user's permission, the approximate geographic location of the client</li>
+                            <li><a href="http://css-tricks.com/html5-progress-element/">progress bar</a>, <a href="http://css-tricks.com/html5-meter-element/">meter</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">time</a> - new widgets useful for additional semantics and the styling of common kinds of data</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>CSS Fundamentals</h3>
+
+                <p>Be sure you are comfortable with the fundamentals of CSS:</p>
+                <ul>
+                    <li>how to apply CSS inline, embedded, and externally</li>
+                    <li>how write CSS rules: <code>selector { property:value; } </code></li>
+                    <li>how to use pseudoclass, id and class selectors</li>
+                    <li>create <a href="http://jigsaw.w3.org/css-validator/">valid CSS code</a></li>
+                </ul>
+                <p>Session #3's quiz will be written, closed book</p>
+            </div>
+
+            <h2>Homework</h2>
+            <div class="contblock">
+                <ul>
+                    <li>due by midnight before the next class</li>
+                    <!--	<li>homework specifications will be available here  upon release</li>
+                        <li>-->
+                    <a href="/_shared_resources_1950/downloads/comp1950_homework02.pdf">download the homework</a>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </main>
 
 </section>
 <section class="active">
@@ -92,7 +1412,6 @@
     <div class="lectureImg"></div>
     <h1>03 | css techniques</h1>
     <ul>
-        <li>Quiz #2</li>
         <li>Stylesheet management</li>
         <li>Simplifying CSS</li>
         <li>Advanced selectors</li>
@@ -100,18 +1419,898 @@
 
     </ul>
 
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+        <div id="maincont">
+            <h1>lecture three: CSS techniques</h1>
+            <h2>Agenda</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Quiz #2</li>
+                    <li>Stylesheet management</li>
+                    <li>Simplifying CSS</li>
+                    <li>Advanced selectors</li>
+                    <li>Rule specificity</li>
+
+                </ul>
+            </div>
+
+
+            <h2>Referencing CSS</h2>
+            <div class="contblock">
+                <h3>Linking your CSS</h3>
+                <p>When linking to external style sheets, there are a number of things to know.  A standard LINK element:</p>
+<pre><code>&lt;link	rel="stylesheet"
+    type="text/css"
+    href="http://www.mysite.com/css/styles.css"
+    title="Main Style"
+    media="screen" /&gt;</code></pre>
+
+                <p>This features a number of things to keep in mind:
+                </p><ul>
+                <li>Each stylesheet requires it's own <code>link</code> tag</li>
+                <li>Multiple stylesheets can be loaded (main.css, fonts.css, layout.css, etc)</li>
+                <li>The <code>rel</code> determines how the HTML will use the file linked to</li>
+                <li>The <code>type</code> attribute is optional (dropped in HTML5), but including it increases browser backward compatibility</li>
+                <li><code>href</code> defines the path, relative or absolute, to the css file </li>
+                <li>The <code>title</code> attribute allows the user to select different styles if required</li>
+                <li>The <code>media</code> attribute allows you to specify what medium this should be viewed in</li>
+            </ul>
+
+                <h3>Media variations: <code>media</code> attribute</h3>
+                <ul>
+                    <li><code>media="type"</code> can be a powerful tool</li>
+                    <li>Examples of supported types:  <code>all</code>, <code>aural</code>, <code>braille</code>, <code>embossed</code>, <code>handheld</code>, <code>print</code>, <code>projection</code>, <code>screen</code>, <code>tty</code>, <code>tv</code></li>
+                    <li>Most are not commonly supported, but ones that you will see often: <code>all</code>, <code>screen</code>, <code>print</code> with handheld becoming more popular</li>
+                    <li>Almost all browsers use the <code>print</code> sheet to render text and elements for when the user selects a page to print</li>
+                    <li>This can be extremely valuable for when you have a lot of page information that you might not want to have show up on a printout (ie: navigation)</li>
+                    <li><a href="/_shared_resources_1950/downloads/css_per_media.zip">Download and examine css media example files</a>, test them after publishing online. Examine the code to see how they work.</li>
+                    <!--	<li>NOTE: you can simulate a variety of clients using Google's Chrome web browser:
+                            <ul>
+                                <li>Open the document in Chrome</li>
+                                <li>Choose Tools > Developer Tools</li>
+                                <li>Open the <code>Emulate</code> panel</li>
+                                <li>Choose the <code>Screen</code> option, then enable <code>CSS Media</code></li>
+                                <li>Use this to emulate different source devices</li>
+                            </ul>
+                        </li>-->
+                    <li>Several handheld devices (iPhones, tablets, most Andriods) do not identify themselves as media type 'handheld'</li>
+                    <li>The reasoning was that the devices were more than capable of displaying standard web sites, so they identify as 'screen'</li>
+                    <li>In session #5, we will apply media queries for responsive design, allowing us to customize the presentation based on the various portable devices</li>
+
+                </ul>
+
+
+                <h3>Alternate style sheets: <code>rel</code> attribute</h3>
+                <p>You can also have alternate stylesheets supported</p>
+                <ul>
+                    <li><code>rel="stylesheet"</code> defines the default stylesheets to use</li>
+                    <li><code>rel="alternate stylesheet"</code> allows different styles to be defined</li>
+                    <li><strong>Tip:</strong> If you have multiple sheets that belong to one "look" make sure they all have the same <code>title</code></li>
+                    <li>You can create alternate style sheets for users, allowing them to select which ones they would like to see</li>
+                    <li>An example would be to create a 'Larger Text' style sheet with everything in a larger font, or providing an option for users to choose an austere, simple page instead of a colorful/image heavy stylesheet</li>
+                    <li>Many browsers are now giving users the ability to select which sheet they would like to see. (Firefox: View &gt; Page Style)  </li>
+                </ul>
+                <h3>Alternate style sheets: <code>title</code> attribute</h3>
+                <ul>
+                    <li>A stylesheet is "persistent" if it is linked with <code>rel="stylesheet"</code> and has no <code>title</code> attribute. All persistent stylesheets are always used when rendering</li>
+                    <li>A stylesheet is "preferred" if it is linked with <code>rel="stylesheet"</code> and has a <code>title</code> attribute. these styles will be used as the default. preferred stylesheets with the same title are grouped together</li>
+                    <li>Finally, a stylesheet is "alternate" if it is linked with <code>rel="alternate stylesheet"</code> and has a <code>title</code>. These stylesheets are supposed to allow the user to choose stylesheets, they are grouped together by <code>title</code> and show up in the browser's stylesheet selector if it has one (<code>View &gt; Page Style</code> in Firefox). Each group (by <code>title</code>) is mutually exclusive.</li>
+                </ul>
+            </div>
+
+            <h2>Exercise #1: Apply An Alternate Stylesheet</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/alternate_stylesheets.zip">Download the alternate stylesheet starting files</a></li>
+                    <li>Make a copy of one of the current stylesheets, rename it, and change some of the styles</li>
+                    <li>Add this new stylesheet as an "alternate stylesheet" to the HTML page</li>
+                    <li>Show your instructor when complete</li>
+                    <li><a href="/_shared_resources_1950/downloads/alternate_stylesheets_solution.zip">Download a sample solution</a><p></p></li>
+                </ul>
+
+            </div>
+
+            <h2>@import Method: Managing Multiple CSS Files</h2>
+            <div class="contblock">
+
+                <p>The <code>@import</code> directive can be used embedded or externally to easily manage the loading of stylesheets</p>
+
+                <h3>Embedded Example:</h3>
+                <p>Embedding the <code>@import</code> works well when dealing with older browsers, as they don't read the command. Simply reference a stylesheet that imports another sheet, so you protect yourself from older browsers. Should also be used in conjunction with an older-style page (lo-fi) for older browsers.</p>
+
+                <p>In your document, use the following within the &lt;head&gt; tag:</p>
+
+                <pre><code>&lt;link rel="stylesheet" type="text/css" href="/css/basic_styles.css" media="all" /&gt;</code></pre>
+	<pre><code>&lt;style type="text/css" media="all"&gt;
+        @import url("/css/rich_styles.css");
+        &lt;/style&gt;</code></pre>
+                <p>This allows you to include basic styles in <code>basic_styles.css</code> (for older, or CSS-less-supported browsers) and have current styles for modern browsers in <code>rich_styles.css</code>.</p>
+
+                <h3>External Example:</h3>
+                <p>You can use the <code>@import</code> method to import multiple stylesheets from a basic stylesheet that you link to.  This will reduce the clutter that can sometimes occur within the <code>&lt;head&gt;</code> section.</p>
+                <p>It is also a great place to be able to manage your CSS. From your main document, create a <code>&lt;link&gt;</code> to your <code>styles.css</code> page.</p>
+                <p>In the body of the <code>styles.css</code> file, import as many files as you need:</p>
+                <ul>
+                    <li><code>@import url("/css/type.css");</code></li>
+                    <li><code>@import url("/css/nav.css");</code></li>
+                    <li><code>@import url("/css/template.css");</code></li>
+                </ul>
+                <p><strong>NOTE:</strong> when using the <code>@import</code> directive in an external CSS file, ensure it is the first lines of code in the <code>.css</code> file. It is also best to not include other CSS rules in a page that uses <code>@import</code> </p>
+            </div>
+
+            <h2>Exercise #2: Using @import</h2>
+            <div class="contblock">
+                <ul>
+
+                    <li><a href="/_shared_resources_1950/downloads/importing_css.zip">Download the css import exercise starting files</a></li>
+                    <li>Use the <code>@import</code> feature to simplify the HTML file's CSS references, so that only one <code>&lt;link&gt;</code> tag is required in the HTML <code>&lt;head&gt;</code> section.</li>
+                    <li>Show your instructor when complete</li>
+                    <li><a href="/_shared_resources_1950/downloads/importing_css_solution.zip">Download a sample solution</a><p></p></li>
+
+                </ul>
+            </div>
+
+
+            <h2>Simplifying your CSS</h2>
+            <div class="contblock">
+                <p>When building your CSS rules, there are some easy ways to compact your code.
+
+                </p><h3>Grouping selectors</h3>
+                <ul>
+                    <li>If you would like to apply the same style to a multitude of different selectors, you can group them with the comma</li>
+                    <li><code>h1, h2, h3, h4, h5 { color: red; }</code></li>
+                    <li>This can be done with Elements, classes and IDs</li>
+                    <li>Specific rules for H3 (for example) can come later</li>
+                </ul>
+
+                <h3>Grouping comes to Classes</h3>
+                <ul>
+                    <li>As well as grouping Elements, you can also group classes</li>
+                    <li>Define several classes: <code>.cool{ color:red; } .wicked { border:1px solid black; }</code></li>
+                    <li>Assign several classes at once: <code>&lt;p class="cool wicked"&gt;</code> will actually select both the cool and wicked classes</li>
+                    <li>The order of the attribute values is irrelevant</li>
+                    <li>Case is important!  Remember to use a single rule for CSS naming and stick with it</li>
+                </ul>
+
+                <h3>Rule Compacting</h3>
+                <ul>
+                    <li>There are a lot of rules that will accept a compacted ruleset</li>
+                    <li>Some examples:<ul>
+                        <li>Font</li>
+                        <li>Border</li>
+                        <li>Padding</li>
+                        <li>Margin</li></ul></li>
+                    <li>Example border and font shorthand patterns:
+                        <ul>
+                            <li><code>border: width style color;</code></li>
+                            <li><code>font: font-size font-family;</code></li>
+                            <li><code>font: font-style font-variant font-weight font-size/line-height font-family;</code></li>
+                        </ul>
+                    </li>
+
+                    <li>Several options are available for applying styles to box model coordinates on <code>borders</code>, <code>paddings</code>, and <code>margins</code>. For example:
+                        <ul>
+                            <li><code>border-width:10px;</code>
+                                <ul>
+                                    <li>all four borders are 10px</li>
+                                </ul>
+                            </li>
+                            <li><code>border-width:10px 20px;</code>
+                                <ul>
+                                    <li>top and bottom borders are 10px</li>
+                                    <li>left and right borders are 20px</li>
+                                </ul>
+                            </li>
+                            <li><code>border-width:10px 20px 30px;</code>
+                                <ul>
+                                    <li>top border is 10px</li>
+                                    <li>left and right borders are 20px</li>
+                                    <li>bottom border is 30px</li>
+                                </ul>
+                            </li>
+                            <li><code>border-width:10px 20px 30px 40px;</code>
+                                <ul>
+                                    <li>top border is 10px</li>
+                                    <li>right border is 20px</li>
+                                    <li>bottom border is 30px</li>
+                                    <li>left border is 40px</li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li>The shorthand code for font styles might look like this:<br>
+                        <code>font: italic small-caps bold 100%/1.3em Arial, "Trebuchet MS", Sans-serif;</code>
+                        <br>or, using fewer properties<br>
+                        <code>font: 12px arial, sans-serif;</code>
+                    </li>
+
+                </ul>
+
+                <h3>While we are on Fonts...</h3>
+                <ul>
+                    <li>Remember to <strong>always</strong> specify multiple fonts</li>
+                    <li>Also, <strong>always</strong> specify a generic font family as a backup (serif, sans-serif, monospace, fantasy)</li>
+                    <li>If font name has a space, make sure you enclose it in quotes: "Times New Roman"</li>
+                    <li>Serif fonts: good for headlines</li>
+                    <li>Sans-serif fonts: good for body content</li>
+                    <li><strong>Bad fonts</strong>: Comic Sans and Impact.  Resist the urge!
+                    </li></ul>
+
+
+            </div>
+
+            <h2>CSS Selectors</h2>
+            <div class="contblock">
+
+                <p>There are several <a href="http://css.maxdesign.com.au/selectutorial/">advanced CSS selector techniques</a> that provide plenty of options for the application of style.</p>
+                <h3>Universal Selector</h3>
+                <ul>
+                    <li>This is a fairly widely supported selector: the asterisk <code>*</code></li>
+                    <li>Use it to specify a global rule</li>
+                    <li><code>* { color: red; }</code> will make all font color red on your page</li>
+                    <li>The universal selector can be very powerful, as it can command a lot of changes to your styles,
+                    </li></ul>
+
+
+                <h3>Pseudo-classes</h3>
+                <p>A Pseudo-class is a selector that allows you to reference a specific action or attribute of an element.  This is most often used when specifying <code>a</code> attributes, such as <code>:visited</code> and <code>:link</code>.</p>
+
+                <p>There are other uses for pseudo elements, that will allow for greater detail in styling content, such as <code>:first-letter</code> and <code>:first-line</code>.  These allow the browser to apply a style based on an unselected, but displayed element. </p>
+
+                <p><em>Best part:</em>  No <code>span</code> or <code>div</code> required to access these pseudo-elements.</p>
+                <ul>
+                    <li>Within <code>a</code> pseudo-elements in particular, it's important to follow a certain order:
+                        <ul><li>Link</li>
+                            <li>Visited</li>
+                            <li>Hover</li>
+                            <li>Active</li></ul>
+                    </li>
+                    <li>Easy mnemonic: LVHA - <strong>L</strong>o<strong>V</strong>e - <strong>HA</strong>te</li>
+                    <li>Because of the way that CSS applies rules, it looks at the LAST rule for a given element and applies more weight to it.</li>
+                    <li>So: if you are Hovering over a link, you don't want to see the Link state</li>
+                    <li>So: If you CLICK on a link, you don't want to see the Link state</li>
+                    <li>Be sure to review these <a href="http://css-tricks.com/pseudo-class-selectors/">psuedo-class references and examples</a></li>
+                </ul>
+
+                <h3>Descendant Selectors</h3>
+                <ul>
+                    <li>Separated by a space, the last element being the key one</li>
+                    <li><code>h1 em</code> will apply rules to all em's within an h1</li>
+                    <li>You can have as many as you want: <code>ul ol ul li</code></li>
+                    <li>Great for specifying different styles when they apply only in certain areas</li>
+                    <li><code>#nav a { ... }</code> will only apply these rules to Anchors within the div called nav</li>
+                    <li>Degree of separation can be infinite, so be careful</li>
+                    <li><code>p em</code> will match ANY em that descends from a paragraph, no matter how nested</li>
+                </ul>
+
+                <h3>Child Selectors</h3>
+                <ul>
+                    <li>Uses the &gt; combinator to specify children</li>
+                    <li>Will select an element that is directly descended from another element</li>
+                    <li><code>p &gt; strong</code> will only select a strong tag that is inside a paragraph</li>
+                    <li>Will not select a strong tag embedded in any other tag (even if it is within a paragraph)</li>
+                </ul>
+
+
+                <h3>Attribute Selectors</h3>
+                <ul>
+                    <li>You can also select elements by what the element contains</li>
+                    <li>The method is: <code>element[attribute=value]</code></li>
+                    <li>If you specify an attribute with no value, you will match any element that simply has the attribute present (no matter what it's value is)</li>
+                    <li><code>p[align] {color: red;}</code> will turn red any paragraph that contains an align attribute</li>
+                    <li>Similarly, <code>img[alt] {border: 1pt red solid; }</code> will draw a red line around all images with an alt attribute</li>
+                    <li>You can further direct the attribute selector to find content that is at the beginning (using the carat: ^), somewhere inside (using the asterisk: *) or end of a value (using the dollar sign: $)</li>
+                    <li>If you wanted to find any files that were SHTML files and mark their link differently, you could write: <code>a[href$=".shtml"] { color: olive; }</code></li>
+                </ul>
+
+                <p>Lets try some examples with a <a href="/_shared_resources_1950/downloads/advanced_css_selectors.html">sample page</a>. To add CSS, use either a tool like Firebug or download the html page and alter it in a text editor. You can examine an <a href="/_shared_resources_1950/downloads/advanced_css_selectors_complete.html">updated sample page</a> to see completed examples of the advanced CSS selectors.  </p>
+
+            </div>
+
+
+
+
+
+            <h2>Exercise #3: Advanced Selectors</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/css_selector_exercise.zip">Download the exercise source files</a></li>
+                    <li>Make NO changes to the HTML file, other than adding embedded or external CSS. Do NOT add any attributes (neither class nor id) to any of the tags.</li>
+                    <li>Use the various available CSS selectors to style the HTML on the left side of the page so that it matches the image on the right side.</li>
+
+                    <li>Show your instructor when complete</li>
+
+                    <li><a href="/_shared_resources_1950/downloads/css_selector_exercise_sample.zip">Download a sample solution</a></li>
+                </ul>
+
+            </div>
+
+            <!--
+            <h2>Exercise #3b: Advanced Selectors</h2>
+            <div class="contblock">
+            <h3>More Attribute Selectors - Identify File Types</h3>
+            <p>In this advanced exercise, you can use Attribute Selectors to let your users know what kind of file they are going to download by showing an icon</p>
+            <p>Using CSS, you don't have to add any images to your markup!</p>
+            <ul>
+                <li><a href="/_shared_resources_1950/downloads/css_attribute_selectors.zip">Download the source files</a></li>
+                <li>Using attribute selectors (and a <code>background</code> property), try and get the appropriate icons to line up with each file type</li>
+            <li><a href="/_shared_resources_1950/downloads/css_attribute_selectors_solution.zip">Download a sample solution</a></li>
+            </ul></div>
+            -->
+
+            <h2>Rule Order &amp; Specificity</h2>
+            <div class="contblock">
+
+                <p>When a style declaration is found to be in conflict with a previously declared style, there is a method for determining which one will win out.  The process is built into every web browser, and almost all of them calculate the values identically (for once!).</p>
+
+                <p>Here is how the <acronym title="World Wide Web Consortium">W3C</acronym> defines the process by which style order is determined:</p>
+
+                <ul>
+                    <li><strong>Discover all declarations.</strong>  Find all declarations that apply to the element and property in question, for the target media type. Declarations apply if the associated selector matches the element in question. </li>
+                    <li><strong>Sheet Order.</strong> The primary sort of the declarations is by weight and origin: for normal declarations, author style sheets override user style sheets which override the default style sheet.
+                        <ul><li class="note"><em>Note:</em> For "!important" declarations, user style sheets override author style sheets which override the default style sheet. "!important" declaration override normal declarations. An imported style sheet has the same origin as the style sheet that imported it. </li></ul>
+                    </li>
+                    <li><strong>Specificity:</strong> The secondary sort is by specificity of selector: more specific selectors will override more general ones. Pseudo-elements and pseudo-classes are counted as normal elements and classes, respectively. </li>
+                    <li><strong>Sort by Order:</strong> Finally, sort by order specified: if two rules have the same weight, origin and specificity, the latter specified wins. Rules in imported style sheets are considered to be before any rules in the style sheet itself.</li>
+                </ul>
+
+                <p>All of the rules are pretty straightforward, except for Specificity, which bears some explanation.
+                </p>
+
+                <p><strong>Specificity</strong> is a method for determining what rules are applied when a conflict between two selectors occurs.  Through a method of adding values when certain elements and selectors are present, a specificity number can be applied to any CSS rule.  The one with highest specificity wins and the associated rule is applied to the element(s) in question.</p>
+
+                <h3>Ruleset for Specificity</h3>
+                <p>Style sheets can also override conflicting style sheets based on their level of specificity, where a more specific style will always win out over a less specific one. It is simply a counting game to calculate the specificity of a selector.
+
+                </p><ol>
+                <li>Count the number of ID attributes in the selector.</li>
+                <li>Count the number of CLASS attributes in the selector.</li>
+                <li>Count the number of HTML tag names in the selector.</li>
+            </ol>
+                <p></p>
+
+                <p>Next, write the three numbers in exact order with no spaces or commas to obtain a three digit number. (Note, you may need to convert the numbers to a larger base to end up with three digits.) The final list of numbers corresponding to selectors will easily determine specificity with the higher numbers winning out over lower numbers. Following is a list of selectors sorted by specificity:
+
+                </p><ul>
+                <li>#id1<br>/* <code>id</code>=1 <code>class</code>=0 <code>HTML</code>=0 --&gt; specificity = 100 */</li>
+                <li>UL UL LI.red<br>/* <code>id</code>=0 <code>class</code>=1 <code>HTML</code>=3 --&gt; specificity = 013 */</li>
+                <li>LI.red<br>/* <code>id</code>=0 <code>class</code>=1 <code>HTML</code>=1 --&gt; specificity = 011 */</li>
+                <li>LI<br>/* <code>id</code>=0 <code>class</code>=0 <code>HTML</code>=1 --&gt; specificity = 001 */</li>
+            </ul>
+                <p></p>
+
+
+                <h3>!important rule</h3>
+                <ul>
+                    <li>This declaration, when added to a rule, will override almost all other declarations, with no respect for specificity.  </li>
+                    <li>It indicates that this rule should take over any previous rules that might govern a specific element.</li>
+                    <li>Example
+                        <code>
+                            .selector{ color:blue !important; }
+                        </code>
+                    </li>
+                    <li>This rule can cause havoc if overused, as it will overrule any other declaration with the same selector.  <strong>Be careful with <code>!important</code></strong></li>
+
+                </ul>
+
+            </div>
+
+
+            <h2>CSS Measurements</h2>
+            <div class="contblock">
+
+                <p>In CSS, there are a number of measurement values that can be used in declarations.</p>
+
+                <ul>
+                    <li>The most common are size measurements which are mostly applied to fonts, margins, padding, borders, etc.</li>
+                    <li>Can be an easy way to space your page - based on the printed word on the page</li>
+                    <li>Some measurements systems are very old and rarely used</li>
+                </ul>
+
+                <h3>Size measurements</h3>
+
+                <ul>
+                    <li><strong>px</strong> - Pixels is one of the most common measuring types.  It is specific to computers, as it renders based on the pixel-display of all monitors.  Great for specific measurements on boxes and borders, but for fonts, it can lead to difficulty as some browsers don't allow scaling and font can end up too small</li>
+                    <li><strong>pt</strong> - Points is an aold system related to type-setting that had a standard size for points.  This is a relative size based on the users' system</li>
+                    <li><strong>pc</strong> - Picas is a very old system that was frequently related to typewritten documents.  Rarely used.</li>
+                    <li><strong>em</strong> - A relative measurement of the letter "m" in the chosen font. This is a popular one for spacing around text, as it inherits the font dimensions</li>
+                    <li><strong>ex</strong> - Similar to <code>em</code>, this is a relative measurement of the letter "x".  However, it is rarely used, and not fully supported</li>
+                    <li><strong>%</strong> - Percentage measurements are also very common, but can be problematic when inheritance happens when multiple elements are nested in one another</li>
+                    <li><strong>named</strong> - This refers to fonts and a few other elements.  The named sizes are xx-small, x-small, small, medium, large, x-large, xx-large.  They are relative to the browsers base font size</li>
+                </ul>
+
+                <h3>Color Measurement</h3>
+                <p>Colors can be specified in a number of ways, corresponding to the system that your organization or visual element requires.</p>
+
+                <p>Almost all color systems use a method for expressing a combination of the three color spaces used for displaying colors on computer monitors: Red Green and Blue.</p>
+                <ul>
+                    <li><strong>Hex: <code>#003366</code></strong> - One of the most common systems, it combines 2 digits each for Red Green and Blue.  Each hex pair stand stands for digits between 00 and FF in hexadecimal</li>
+                    <li><strong>Compact Hex: <code>#f30</code></strong> - This is almost identical to the Hex version, except that when three numbers are used, most browsers will just double-up each digit.  So, <code>#f30</code> will become <code>#ff3300</code></li>
+                    <li><strong>Named: <code>cornflowerblue</code></strong> - Although the official W3C specification only lists 16 named colors, almost every browser supports the various <a href="http://www.google.ca/search?q=css+named+colors">named colors</a></li>
+                    <li><strong>RGB: <code>rgb(255, 0, 255)</code></strong> - This allows the user to specify the same thing as Hex, but in Decimal format</li>
+                    <li><strong>RGB %: <code>rgb(100%, 0%, 50%)</code></strong> - Almost identical to RGB, but with percentages of each color space instead</li>
+                </ul>
+            </div>
+
+            <h2>CSS Resources</h2>
+            <div class="contblock">
+                <ul>
+                    <li><strong><a href="https://developer.mozilla.org/en/CSS-2_Quick_Reference/">CSS2 Quick Reference</a></strong></li>
+                    <li><strong><a href="http://jigsaw.w3.org/css-validator/">CSS Validator</a></strong></li>
+                </ul>
+            </div>
+
+            <h2>Summary</h2>
+            <div class="contblock">
+                <h3>Advanced CSS</h3>
+                <ul>
+                    <li>use <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets">rel='alternate stylesheet'</a></code> and unique <code>title</code>s with your <code>link</code> elements to facilitate alternative stylesheets</li>
+                    <li>use <code><a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">@import</a></code> to reduce the quantity of stylesheets that need to be linked to in your HTML</li>
+                    <li><a href="http://css.maxdesign.com.au/selectutorial/">css selector</a> mastery cleans up the HTML code, and provides more styling options. practice using <code>universal</code>, <code>child</code>, <code>descendant</code> and <code>attribute</code> selectors</li>
+                    <li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">rule specificity</a> is calculated by counting the number of <code>id</code>s, <code>class</code>es, then <code>HTML</code> selectors. the higher resulting 3 digit number will over-rule lower values</li>
+                    <li>use rule compacting to reduce the number of css properties you need to declare</li>
+                </ul>
+                <h3>Organizing CSS Rules</h3>
+                <p>When building your CSS, here are some tips to better organize your rules</p>
+                <ul>
+                    <li><strong>Set the defaults.</strong>  Create your global rules (like what fonts you want to see on the entire page), and specify variations for elements or classes later in your stylesheet</li>
+                    <li><strong>Later rules override earlier ones.</strong> All things being equal, later rules override earlier ones.  So, add more specific requirements in the later parts of your stylesheet. for example:
+                        <ol>
+                            <li>code HTML sectors first</li>
+                            <li>then .class selectors</li>
+                            <li>finally .id selectors</li>
+                        </ol>
+                    </li>
+                    <li><strong>!important always wins.</strong> If you want a specific rule to be used no matter where it falls in the cascade, add <strong>!important</strong> to the end.  Use this <strong>sparingly</strong>!</li>
+                    <li>Comment your code!</li>
+                </ul>
+                <p>Session #4's quiz will be practical, open book</p>
+            </div>
+
+
+            <h2>Homework</h2>
+            <div class="contblock">
+                <ul>
+                    <li>due by midnight before the next class</li>
+                    <li>homework specifications will be available here upon release. check back later for an active download link</li>
+                    <li><a href="/_shared_resources_1950/downloads/comp1950_homework03.pdf">download the homework</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+
 </section>
 <section class="active">
 
     <div class="lectureImg"></div>
     <h1>04 | css layouts</h1>
     <ul>
-        <li>Quiz #3</li>
         <li>CSS Backgrounds, Sprites</li>
         <li>CSS Reset</li>
         <li>Box Model idiosyncracies</li>
         <li>Positioning techniques</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+        <div id="maincont">
+            <h1>lecture four: css layouts</h1>
+            <h2>Agenda</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Quiz #3</li>
+                    <li>CSS Backgrounds, Sprites</li>
+                    <li>CSS Reset</li>
+                    <li>Box Model idiosyncracies</li>
+                    <li>Positioning techniques</li>
+                </ul>
+            </div>
+
+            <h2>CSS Backgrounds</h2>
+            <div class="contblock">
+                <p>Using images requires either the HTML <code>img</code> tag or the CSS <code>background-image</code> property. </p>
+                <h4>When to use HTML image tag</h4>
+                <ul>
+                    <li>for image infomation crucial to the page content</li>
+                    <li>to allow the image to be indexed by search engines (SEO)</li>
+                    <li>to allow using the <code>alt</code> attribute, for both SEO and screen readers</li>
+                </ul>
+
+                <h4>When to use CSS background-image</h4>
+                <ul>
+                    <li>for images that contribute to the design of the site, rather than the content</li>
+                    <li>for image effects that depend on CSS techniques (eg :hover pseudoclassing for image swap on mouseover)</li>
+                    <li>repeating images</li>
+                    <li>icons, textures, patterns</li>
+                </ul>
+
+                <p>CSS supports several useful <a href="http://www.htmlgoodies.com/beyond/css/article.php/3868361">background related properties</a>.</p>
+                <ul>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>:</code><br>assign the background color</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">background-image</a>: url()</code> <br>applies an image as the background.
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">background-repeat</a>: repeat | repeat-x | repeat-y | no-repeat</code><br> determines how a background image will repeat display. the default is <strong>repeat</strong>
+                        <br><fieldset><legend><code>background-repeat:repeat;</code></legend><div id="background_image_repeat"></div></fieldset>
+                        <fieldset><legend><code>background-repeat:repeat-x;</code></legend><div id="background_image_repeat_x"></div></fieldset>
+                        <fieldset><legend><code>background-repeat:repeat-y;</code></legend><div id="background_image_repeat_y"></div></fieldset>
+                        <fieldset><legend><code>background-repeat:no-repeat;</code></legend><div id="background_image_no_repeat"></div></fieldset>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>: &lt;percentage&gt; | &lt;length&gt;</code><br> determines the size of  a background image. you can use this to scale backgrounds to fit their parent containers
+                        <br><fieldset><legend><code>background-size:100%;</code></legend><div id="background_image_size_percent"></div></fieldset>
+
+                        <fieldset><legend><code>background-size:100% 50%;<br>background-repeat:no-repeat;</code></legend><div id="background_image_size_prt_vry"></div></fieldset>
+
+                        <fieldset><legend><code>background-size:30px;</code></legend><div id="background_image_size_fixed"></div></fieldset>
+                    </li>
+
+
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment">background-attachment</a>: scroll | fixed</code><br> determines if a background image will scroll with the parent element or the viewport	<br><fieldset><legend><code>background-attachment:fixed;</code></legend><div id="background_image_fixed"></div></fieldset>
+                        <fieldset><legend><code>background-attachment:scroll;</code></legend><div id="background_image_scroll"></div></fieldset>
+                    </li>
+
+
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>: &lt;percentage&gt; | &lt;length&gt; | left | center | right |top | bottom</code><br> the position can be assigned with either pixels or percent. using pixels, you can position the x y starting point for the background image. 0px 0px is the default
+                        <br><fieldset><legend><code>background-position: left;<br>background-repeat:no-repeat;</code></legend><div id="background_image_position_left"></div></fieldset><fieldset><legend><code>background-position: 50px 25px;<br>background-repeat:no-repeat;</code></legend><div id="background_image_position"></div></fieldset>
+                        <fieldset><legend><code>background-position: 50% 50%;<br>background-repeat:no-repeat;</code></legend><div id="background_image_position_percent"></div></fieldset>
+                        <fieldset><legend><code>background-position: 50% 50%; <br>background-size:30px;<br>background-repeat:no-repeat;</code></legend><div id="background_image_position_percent_size"></div></fieldset>
+
+                    </li>
+                </ul>
+
+
+
+                <h4>Compact background Property</h4>
+                <p>The pattern to follow when using the background property to define several space delimited values at once:<br><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background</a>: &lt;background-color&gt; | &lt;background-image&gt; | &lt;background-repeat&gt; | &lt;background-attachment&gt; | &lt;background-position&gt;</code></p>
+
+                <h4>Background Image Examples</h4>
+                <ul>
+                    <li>Parallax background: <a href="parallax_background/">Test Parallax Background</a> or <a href="/_shared_resources_1950/downloads/parallax_background.zip">Download Parallax Background Example</a></li>
+                </ul>
+
+            </div>
+
+            <h2>Sprites</h2>
+            <div class="contblock">
+                <p>Each image on your website requires a separate request/response between the client and server. Using one larger image instead of several smaller images can result in a more effiecient client/server transaction, since it reduces the number of requests/responses that need to occur. </p>
+                <p>This is especially useful for images that are NOT an important part of your foreground content, but sprites perfect for icons, textures and images used purely for aesthetics</p>
+                <ol>
+                    <li>use a <a href="http://csssprites.com/">sprite generator</a> or an image program like photoshop to create a strip or grid of images. this is also an ideal time to determine the correct offsets</li>
+                    <li>use an HTML tag ('div' or 'p' or etc) any block element</li>
+                    <li>define a fixed height and width (large enough to show the image you need to display)</li>
+                    <li>use the url and position offset values
+                        for example:
+                        <ul>
+                            <li><code>background: url("myimage.jpg") xOffset yOffset;</code><br>
+                            </li><li><code>background: url("myimage.jpg") 0px 0px;</code><br>
+                            places myimage.jpg in the top left corner ( 0px 0px )</li>
+                            <li><code>background: url("myimage.jpg") -50px 0px;</code><br>
+                                places myimage.jpg at the top, but shifts the start of the image 50 pixels to the right (offset -50px)</li>
+                            <li><code>background: url("myimage.jpg") 50px 0px;</code><br>
+                                places myimage.jpg at the top, but shifts the start of the image 50 pixels to the left (offset -50px)</li>
+                        </ul>
+
+
+                    </li>
+                </ol>
+
+                <h4>Advantages of using sprites</h4>
+                <ul>
+                    <li>fewer http requests between server and client</li>
+                    <li>a single composite image is almost always smaller in filesize compared to the sum size of the images made separately</li>
+                    <li>perfect for icons, buttons, and graphics that contribute to the aesthetic of the page </li>
+                </ul>
+                <h4>Disadvantages of using sprites</h4>
+                <ul>
+                    <li>not all images should be displayed as backgrounds! important content graphics should always use the img tag. this way the images will contribute to search engine optimization and maximize accessibility</li>
+                    <li>time spent building the composite sprite image(s) increases</li>
+                    <li>time coding and maintaining the CSS increases</li>
+                </ul>
+                <h4>Spritely Resources</h4>
+                <ul>
+                    <li><a href="http://css-tricks.com/css-sprites/">Sprite introduction</a></li>
+                    <li><a href="http://csssprites.com/">Sprite generator</a></li>
+                </ul>
+
+            </div>
+            <h2>Execise #1: Sprites</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/sprites_exercise.zip">Download</a> and extract the source files</li>
+                    <li>examine the source code to see how the example sprite is being used</li>
+                    <li>create your own css rules for displaying the second sprite images</li>
+                    <li>a sample solution will be available for download here later today</li>
+                    <li><a href="/_shared_resources_1950/downloads/sprites_exercise_solution.zip">Download a sample solution</a></li>
+                </ul>
+
+            </div>
+
+
+            <h2>CSS Reset</h2>
+            <div class="contblock">
+
+                <p>An excellent way to instruct a browser to set attributes to predictable values</p>
+                <p>Custom created and self-hosted, or public domain CDN hosted options and everything in between!</p>
+                <h3>Advantages of CSS Resets</h3>
+                <ul>
+                    <li>Content is now predictable in most every browser</li>
+                    <li>Minimizes odd behaviour in rendering</li>
+                    <li>Easy to create custom rules for CMS-controlled sites</li>
+                </ul>
+
+                <p>There are some excellent resets out there, some of the better ones can be found at <a href="http://www.cssreset.com/">cssreset.com</a></p>
+                <p>A new and innovative version that was recently released: <a href="http://necolas.github.com/normalize.css/">normalize.css</a>
+
+                </p><ul>
+                <li>Doesn't just reset, but takes advantage of some of the built-in features of various tags</li>
+                <li>Actually corrects bugs rather than just resetting everything</li>
+                <li>Used by <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+            </ul>
+
+                <h3>Using CSS Resets</h3>
+                <ul>
+                    <li>Works just like any other CSS you link to</li>
+                    <li>Can work embedded as well</li>
+                    <li><strong>Important</strong>: use before any other stylesheets!</li>
+                    <li>Remember to code your CSS from General to Specific. A reset is meant to be very general, allowing you to build on top of it</li>
+                </ul>
+            </div>
+
+            <h2>CSS Positioning</h2>
+            <div class="contblock">
+
+                <p>Building proper CSS-based layouts requires an understanding of how positioning works, which is based largely on the Box Model concept. A lot has been written about the fabled Box Model and it's lack of support in certain browsers (eg: <a href="http://tantek.com/CSS/Examples/boxmodelhack.html">Internet Explorer 5.5 Box model hack.</a>)</p>
+
+                <h3>Box model basics:</h3>
+                <img src="box_model.gif" alt="CSS Box Model">
+                <ul>
+                    <li>All elements are built around the concept of a box</li>
+                    <li>Every element is contained in a Box of some sort or another</li>
+                    <li>Each element has a content core, surrounded by optional padding, borders, margins</li>
+                    <li>These are the 'building blocks' of a CSS layout, with both inline and block-level elements having these properties</li>
+                    <li><strong>Width</strong> refers to left inner edge to the right inner edge</li>
+                    <li><strong>Height</strong>  refers to the top inner edge to the bottom inner edge</li>
+                    <li>This can cause problems if elements are near one another with considerable padding or margins</li>
+                    <li>Paddings and borders add to the dimensions of the box model.</li>
+                    <li>Additionally, margins will collapse vertically, but not horizontally.  This can lead to some confusion when trying to build out a well-positioned page</li>
+                </ul>
+
+                <p>In the following example:</p>
+
+			<pre><code>&lt;body&gt;
+                &lt;div&gt;
+                &lt;p&gt;This is some text&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/body&gt;
+            </code></pre>
+
+                <ul>
+                    <li>The &lt;p&gt; block is contained within the &lt;div&gt; block, which is, in turn, contained inside the &lt;body&gt; block.  </li>
+                    <li>This is crucial for visual layout, as this will determine how your layout looks.</li>
+                    <li>Inline blocks are not as crucial, as they will flow alongside other elements and have little impact on layout.</li>
+                    <li>Inline tags are always as wide and tall as they need to be to contain their data. They will not respond to <code>width</code> and <code>height</code>. If you need to size an inline tag, use <code>display:block;</code></li>
+                </ul>
+
+                <p>In order to have some control over how these boxes are placed, block boxes (like <code>div</code> or <code>p</code> or <code>h1</code>) act as <strong>containing blocks</strong> to the content and blocks inside.</p>
+
+                <p>Containing blocks are used to determine the position and dimensions of the elements within it.</p>
+
+			<pre><code>&lt;div id="main"&gt;
+                &lt;p style="width:25%;"&gt;
+                This paragraph will be 25% the width of the parent div,
+                not 25% of the page
+                &lt;/p&gt;
+                &lt;/div&gt;</code></pre>
+                <p>Download and walk through some <a href="/_shared_resources_1950/downloads/css_box_model.zip">box model code examples</a> to get a better understanding.</p>
+
+                <h3>Positioning Details</h3>
+                <ul>
+                    <li><strong>Static Flow</strong> - the default. elements that 'flow' from left to right.  Static flow is the default scheme with block elements flowing from the top downwards.  Inline elements flow left to right</li>
+                    <li><strong>Static Flow</strong> also sees your vertical margins collapsing.  Only the larger of the two margins are used when calculating distance between the two.
+                    </li><li><strong>Non-replaced element</strong> - these elements are actually contained inside the document. The content of non-replaced elements may be stylerd with CSS<ul><li><em>Example:</em> a paragraph of text.</li></ul>
+                </li>
+
+                    <li><strong>Replaced element</strong> - these are not actually contained in the document, but are linked to. The content of replaced elements is not considered in the CSS rendering model.<ul><li><em>Example:</em> <code>&lt;img&gt;</code> or <code>&lt;input&gt;</code></li></ul></li>
+
+                </ul>
+
+                <h3>Floating and Positioning</h3>
+                <ul>
+                    <li>In order to have your content show in an appropriate location, you may need to either float or position your containers.</li>
+                    <li><strong>Positioning</strong> is fairly strightforward and has been around for a long time.</li>
+                    <li>Declare exactly where an element box will appear compared to where it would normally be</li>
+                    <li><strong>4 kinds:</strong>
+                        <ul><li><strong>Static:</strong> Generated as normal</li>
+                            <li><strong>Relative:</strong> The box is offset by some distance</li>
+                            <li><strong>Absolute:</strong> The box is no longer part of the flow of the document and is placed with respect to its containing block.</li>
+                            <li><strong>Fixed:</strong> Similar to absolute, but it is attached to a specific location</li></ul>
+                    </li>
+                    <li><strong>Floating </strong>was introduced in CSS1 and gives rise to a lot of difficulties for many users.</li>
+                    <li>Similar to <code>&lt;img src="img.gif" align="right"&gt;</code> which 'floats' the image to the right of the content.</li>
+                    <li>Other content will float around floated elements.</li>
+                    <li>Consecutive floats (with similar alignment like <code>right</code> or <code>left</code>) will attempt to float using the same top-line, but will collapse to another line if space does not permit</li>
+                    <li>Consecutive <code>right</code> floats will appear in reverse order on the final render</li>
+                    <li>Other floated areas can create some interesting effects if DIVs are not floated correctly</li>
+                    <li>Backgrounds can cause havoc with floated elements, as much of the time, you will see the background coming through</li>
+                    <li>To make sure elements don't fall into a floated element, you can use <code>clear: left | right | both;</code></li>
+                </ul>
+                <p></p>
+
+                <p>Walk through some <a href="/_shared_resources_1950/downloads/css_positioning.zip">css positioning code examples</a> to get a better understanding.</p>
+            </div>
+            <h2>Exercise #2: Practice CSS Positioning</h2>
+            <div class="contblock">
+                <p>Try walking through a few <a href="scenarios.html">positioning scenarios</a></p>
+            </div>
+
+            <h2>Layout Basics</h2>
+            <div class="contblock">
+                <ul>
+                    <li>The root element (html) is the container for the viewport, or the window which you see the document.  Variable size!</li>
+                    <li>In order to lay out content on the screen, there needs to be a container that you can place your content into.</li>
+                    <li>For a single column, vertical stack, this is fairly easy: just place all the content in the  container.</li>
+                    <li>For more complex layouts, (more than 1 column), you will need to create a container to hold your different content areas.</li>
+                    <li>This is where a DIV comes in</li>
+                    <li>A DIV is an area that can be defined in CSS as having the properties of a box</li>
+                    <li>That box will act as a container for whatever goes inside</li>
+                    <li>DIV elements can be floated or fixed.  Similarly, elements withing those divs can also be positioned relatively or absolutely</li>
+                </ul>
+
+                <h3>Div Layout Examples</h3>
+                <p>If CSS-based layouts are still a mystery, please take a look at some of these basic div based layouts and their associated CSS:</p>
+                <ul>
+                    <li><a href="layouts/one/index.html">CSS Layout One - Two Column Fixed</a></li>
+                    <li><a href="layouts/two/index.html">CSS Layout Two - Two Column Fluid</a></li>
+                    <li><a href="layouts/three/index.html">CSS Layout Three - Three Column Fixed</a></li>
+                    <li><a href="layouts/four/index.html">CSS Layout Four - Three Column Fluid</a></li>
+                </ul>
+
+                <p>There are an infinite number of ways to arrange a page with CSS, so go out and create your own. Use some of the rules you learned today as guidelines.</p>
+                <p>A proposed layout building methodology</p>
+                <ol>
+                    <li>design without limits (dont design with 'limitations' of CSS/HTML in mind). consider using an image manipulation program like Adobe Photoshop to build a mock-up of your desired design</li>
+                    <li>set your test browser to default zoom size</li>
+                    <li>set your screen resolution to a conservative setting (eg: 1024px * 768px)</li>
+                    <li>use <code>HTML5</code> semantic tags and <code>div</code>s for each major region of content</li>
+                    <li>if more than one element is part of a group, consider <code>div</code>ing it up, or using an appropriate <code>HTML5</code> semantic tag (eg: <code>&lt;section&gt;</code>)</li>
+                    <li>apply box model dimension properties (<code>padding</code>, <code>margin</code>, <code>border</code>)</li>
+                    <li>assign absolute and fixed positioning where applicable</li>
+                    <li>assign float, relative positioning where applicable</li>
+                    <li>add / remove quantities of content to see how layout behaves</li>
+                    <li>change height and width of browser to see how layout behaves</li>
+                    <li>if all else fails, consider using one of several templates made available online. if you use someone else's code, be sure to <strong>give credit where credit is due</strong> by adding a comment explaining where you found the original code.</li>
+                </ol>
+            </div>
+
+            <h2>Advanced CSS Layouts</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Locating a footer at the bottom of the visible page, even when the page content requires scrolling requires judicious deployment of the CSS height property. <br>
+                        <a href="sticky_footer/">Test an example sticky footer</a> or <a href="/_shared_resources_1950/downloads/sticky_footer.zip">Download a sample sticky footer layout.</a></li>
+                    <li>CSS2 provides no method for one element to determe the height of another. This can make equal-height adjacent column layouts problematic. Several solutions are available, heres a <a href="http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks">pure CSS multi column layout  solution</a> to the issue. <br>
+                        <a href="multi_column_layout/">Test an example multi-column layout</a> or <a href="/_shared_resources_1950/downloads/multi_column_layout.zip">Download a sample multi-column layout</a></li>
+                </ul>
+
+            </div>
+
+
+            <h2>Navigation Lists</h2>
+            <div class="contblock">
+                <ul>
+                    <li>One of the best ways to make your code more semantic: build list-based navigation</li>
+                    <li>Lots of benefits: <ul>
+                        <li>Add/Remove: changing your navigation is very easy in this method.  You need to think of your layout and design differently, but it might be worth it in the long run.</li>
+                        <li>Image-less Browsers: there are many users out there who don't use images, and Lists are a great way to communicate information to those users</li>
+                    </ul></li>
+                    <li>The key is breaking the stereotype of the complex navigation</li>
+                    <li>Keeping it simple can simplify your code and your layout</li>
+                    <li>It's a mental shift for experienced coders</li>
+                    <li><a href="http://css.maxdesign.com.au/listamatic/">List Navigation Examples</a></li>
+                </ul>
+                <p>Let's take a look at </p>
+
+            </div>
+            <h2>Exercise #3: Build a List-Based Navigation</h2>
+            <div class="contblock">
+                <p>Try an <a href="list_nav.html">exercise to build a vertical navigation</a> built with an unordered list and styled in CSS.</p>
+            </div>
+
+            <h2>Exercise #4: Implement A Commonly Used Layout</h2>
+            <div class="contblock">
+                <ul>
+                    <li>imlement a popular fixed width page layout that matches the basic behavior of <a href="layout_exercise_sample/">this example layout</a>. don't spoil the exercise by copying the code from the example, use it to determine the desired structure and behavior</li>
+                    <li><a href="/_shared_resources_1950/downloads/layout_exercise.zip">download the starting files</a>	</li>
+                    <li>be sure to implement the following features<ul>
+                        <li>the header and footer should be as wide as the browser</li>
+                        <li>the navigation and the main section for content should be fixed width centered</li>
+                        <li>the navigation links should be in an HTML unordered list, displaying horizontally and styled with css. you don't need to match the exact design of the example, but try to make an appealingly styled navigation. maybe use one of the <a href="http://css.maxdesign.com.au/listamatic/">list navigation examples</a></li>
+                        <li>the social media icons should NOT be used individually. use the online <a href="http://csssprites.com/">sprite genrator</a> to build a single sprite image, and use that</li>
+                        <li>the social media icons should include a hover effect (change the border)</li>
+
+                    </ul></li>
+                    <li>some of the colors used in the example:<ul>
+                        <li>header/footer background - <span style="background-color:#450716;color:white;">#450716</span>
+                        </li><li>header/footer borders: <span style="background-color:#AD6376;color:white;">#AD6376</span></li>
+                        <li>main content area, yellow highlights, hover effects: <span style="background-color:#FFE47C;">#FFE47C</span></li>
+                        <li>foreground text <span style="background-color:#444444;color:white;">#444444</span></li>
+                    </ul></li>
+                    <li>use a <a href="http://www.lipsum.com/">lorum ipsum generator</a> to create generic page content</li>
+                    <li>a sample solution will be available for download here later today</li>
+                    <li><a href="layout_exercise_sample/">Test a sample solution</a> or <a href="/_shared_resources_1950/downloads/layout_exercise_solution.zip">download a sample solution</a>	</li>
+                </ul>
+            </div>
+
+
+            <h2>Summary</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Practice the various CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background</a> image techniques: these are useful for building modern site designs as well as for using sprites</li>
+                    <li>If your page includes several icons or generic images that aren't a part of your foreground content, consider using sprites. Use a <a href="http://csssprites.com/">sprite generator</a> to help you determine the correct offsets.</li>
+                    <li>Apply a CSS Reset of your choice to bring the various browser defaults into alignment, making for a more predictable and consistent page layout</li>
+                    <li>Be familiar with the fundamentals of working with box model basics:
+                        <ul>
+                            <li>Padding and Borders add to the dimensions of the CSS box model</li>
+                            <li>Horizontal meeting margins are added, vertical meeting margins are collapsed</li>
+                            <li>Practice all the CSS box model and positioning techniques:
+                                <ul>
+                                    <li><a href="http://edutechwiki.unige.ch/en/CSS_box_model_tutorial">box model</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">absolute, relative, fixed</a></li>
+                                    <li><a href="http://css.maxdesign.com.au/floatutorial/">float</a></li>
+                                </ul>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>Use divs or HTML 5 semantic tags to define page layouts. If you have difficulty building your desired layout, consider searching for CSS layout examples online</li>
+                    <li>Use unordered lists <code>ul</code> for site navigation. This is the best semantic option, ideal for screen readers and search engines. Sites like <a href="http://css.maxdesign.com.au/listamatic/">Listamatic</a> provide several list based navigations to consider</li>
+
+                </ul>
+                <p>Session #5's quiz will be practical, open book, and it will be similar to Exercise #4 above.</p>
+
+            </div>
+
+
+            <h2>Homework</h2>
+            <div class="contblock">
+                <ul>
+                    <li>due by midnight before the next class</li>
+                    <!-- <li>homework specifications will be available here for download upon release. check back later for an active download link</li> -->
+                    <li>	<a href="/_shared_resources_1950/downloads/comp1950_homework04.pdf">download the homework</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
 
 </section>
 <section class="active">
@@ -119,11 +2318,450 @@
     <div class="lectureImg"></div>
     <h1>05 | responsive css</h1>
     <ul>
-        <li>Quiz #4</li>
         <li>Print media</li>
         <li>Media queries</li>
         <li>Responsive design</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+        <div id="maincont">
+
+            <h1>lecture five: responsive design</h1>
+            <h2>Agenda</h2>
+            <div class="contblock">
+                <ul>
+                    <li>Quiz #4</li>
+                    <li>Print media</li>
+                    <li>Media queries</li>
+                    <li>Responsive design</li>
+                </ul>
+            </div>
+
+            <h2>Styling For Printers</h2>
+            <div class="contblock">
+
+                <h3>Applying Printer Styles</h3>
+                <p>When linking to your CSS, using <code>media="print"</code> will allow printer friendly styles to be applied. If you wanted the printer styles to inherit your default styles, use <code>media="all"</code> with the default stylesheets :</p><code>&lt;!-- This will apply both stylesheets to the printout --&gt;<br>&lt;link rel="stylesheet" href="default_styles.css" media="all" /&gt;<br>&lt;link rel="stylesheet" href="print_styles.css" media="print" /&gt;</code><p></p>
+                <p>To ensure your default styles wont also be applied to the printer (usually the best option), add <code>media="screen"</code> to the any stylesheets that are not to be used when printing:</p><code>&lt;!-- This will apply ONLY the print_styles.css to the printout --&gt;<br>&lt;link rel="stylesheet" href="default_styles.css" media="screen" /&gt;<br>&lt;link rel="stylesheet" href="print_styles.css" media="print" /&gt;</code><p></p>
+
+                <p>Instead of defining a new link tag, you can alternatively apply a printer styles in an external CSS file, using a <a href="http://www.w3.org/TR/css3-mediaqueries/">media query</a>.</p>
+<pre><code>/* styles for screens */
+    @media screen{
+    header { color:red;	}
+    }
+    /* styles for printers */
+    @media print {
+    header { display:none;	}
+    }</code></pre>
+
+                <h3>Best Practices For Printable Styles</h3>
+                <p>The key to a stylesheet specifically for printing is a matter of <em>planning</em> more than anything.</p>
+
+                <p>You'll need a few things prepared before you can begin:</p>
+                <ul>
+                    <li>A layout that is separated by <code>div</code>s, or if using HTML5, semantic tags (<code>header</code>, <code>nav</code>, etc) are also used to separate page content</li>
+                    <li>Semantic markup including several summary headings</li>
+                    <li>Knowing what areas you want printed and what you don't</li>
+                    <li>Organized content so that printable areas are not nested in non-printable ones</li>
+                    <li>A recognition of why users will print pages. Generally, a website is printed because the user requires a hard copy of the site information, and not because of the visually pleasing way in which that information is presented. Thus print styles should focus on presenting critical information (eg: most page textual content, images crucial to page content) and either hide or reduce less useful content (eg: navigation bars, background images, light/subtle colour schemes)</li>
+                </ul>
+
+                <p>How to build your page. Make sure you have separate <code>div</code> elements for:</p>
+                <ul>
+                    <li>each content section you want printed</li>
+                    <li>page elements that represent titles or headers</li>
+                    <li>other printable elements (footers)</li>
+                    <li>non-printing elements (navigation/sidebars/header images/backgrounds)</li>
+                </ul>
+
+                <p>Once you have planned your layout and created distinct elements, the next steps are to:</p>
+                <ol>
+                    <li>Hide the elements you don't want the printer to see</li>
+                    <li>Re-style the layout</li>
+                    <li>Re-style the visuals </li>
+                    <li>Add textual hyperlink data to <code>&lt;a&gt;</code>nchor elements, optionally also swapping images</li>
+                </ol>
+
+            </div>
+
+            <h2>Styling For Printers 1: Hiding Elements</h2>
+            <div class="contblock">
+                <p>Hide the elements you don't want printed. This should include any regions of the page that provide no value to a printout. This may or may not include:</p>
+                <ul>
+                    <li>navigation links, navigation bars</li>
+                    <li>headers</li>
+                    <li>footers</li>
+                    <li>background images</li>
+                    <li>any areas that require user interaction, eg: search fields, login forms, etc</li>
+                    <li>side bars, advertisements, banner images</li>
+                </ul>
+                <p>Use <code>display:none;</code> to tell the printer to ignore any of the elements listed in the declaration.  Be careful to make sure that none of the elements that are ignored have valuable info in them.</p>	<pre><code>	header, nav, .site_map_link, #search_form{
+                display: none;
+                }</code></pre>
+
+            </div>
+            <h2>Styling For Printers 2: Re-styling Layout</h2>
+            <div class="contblock">
+                <p>After hiding the content you dont want to be printed, remaining content will either have no style at all, or will inherit the styles of any sheets with "ALL" as the media.  For this reason, it is important to explicitly style the remaining <code>divs</code></p>
+	<pre><code>	body, #content, main, footer  {
+        /* floating is not advised for printers */
+        float: none;
+        /* let the printer set margins */
+        width: auto;
+        margin: 0;
+        padding: 0;
+        /* dont display background colors or images */
+        background: none;
+        }</code></pre>
+
+                <ul>
+                    <li>The <code>float</code> property is NOT well supported by printers, using it for print stylesheets is not advised</li>
+                    <li>Consider removing any width or padding restrictions, allowing the printer to set the margins for each page</li>
+                    <li>If you are using this sheet with another stylesheet that has ALL listed as the value for <code>media</code>, you might want to add <code>!important</code> with each rule, to be sure that there will be no inheritance problems</li>
+                    <li>Having a rule like <code>background: none;</code> is good if you use backgrounds, or if you don't.  If you do, they're gone, if you don't - consider it future-proofing.</li>
+                </ul>
+                <h4>Printout Page Control</h4>
+                <p>Optional, but useful rules can control where page breaks will or won't appear...</p>
+                <ul>
+                    <li> Don't allow a page heading to be at the bottom of a page <br> <code>h2, h2, h4, h5, h6{ page-break-after: avoid;  }</code></li>
+                    <li> Ensure important page regions begin on a new page<br> <code>section, article{ page-break-before: always; }</code> <br></li>
+                </ul>
+
+            </div>
+
+            <h2>Styling For Printers 3: Re-styling Visuals</h2>
+            <div class="contblock">
+                <p>This part is the most subjective.  You may want to have users continue to see the fonts and headings the way you displayed them on the screen, or you may want them to be of a more readable style.</p>
+
+                <p>Also, pay attention to colors here.  If you have a light-colored font on a dark-colored background on the screen, or if your anchors are lighter than normal, be sure to set them to a color that is easily seen after printing.</p>
+
+	<pre><code>	body, #content, , main, footer {
+        color: black;
+        font: 12pt/15pt Georgia, "Times New Roman", Serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+        font-family: Arial, Verdana, Helvetica, Sans-serif;
+        }</code></pre>
+
+                <p>With the proliferation of color printers, you might want to choose a color that will show links in B&amp;W as well as color printing (I selected #309 - a compacted hex code for a medium-dark blue):</p>
+	<pre><code>	a:link, a:visited {
+        color: #309;
+        font-weight: bold;
+        text-decoration: underline;
+        }
+    </code></pre>
+
+            </div>
+            <h2>Styling For Printers 4: Display Hyperlink Data, Swapping Images</h2>
+            <div class="contblock">
+                <h3>Displaying Hyperlink Data</h3>
+                <p>One of the most useful things you can do in print format is to provide readable hyperlinks for fully qualified anchor tags.  Without this little trick, they will only see <code>&lt;a&gt;</code> tags as they are displayed onscreen - likely a different colour and underlined.</p>
+                <p>Fully qualified (entire URL) links will be styled like this:</p>
+	<pre><code>	a:link:after,
+        a:visited:after{
+        content: " (URL: " attr(href) ") ";
+        font-size: 90%;
+        }</code></pre>
+
+                <p>This will append a URL to the end of a link on a page, surrounded in brackets with the acronym <code>URL:</code>.  The declaration uses the <a href="http://www.w3.org/TR/CSS21/generate.html">content</a> property with the <a href="http://www.w3.org/TR/CSS21/selector.html#before-and-after">:after</a> pseudoclass to append the value of the <code>href</code> attribute after displaying the hyperlink text.</p>
+
+
+                <h3>Swapping Images</h3>
+                <p>There may sometimes be images that you would want sent to the printer, but may not be suitable in thier current state (eg: if the color of the image would look por on a color printout). Swapping an image in the print styles will require an appropriate structure in the HTML:</p><pre><code>	 <!-- the image to be swapped must be in a parent that you plan to display during printing -->
+                &lt;div&gt;
+                &lt;img src="image_not_suitable_for_printing.jpg" /&gt;
+                &lt;/div&gt;</code></pre>
+                <p>Then use the <a href="http://www.w3.org/TR/CSS21/generate.html">content</a> property to insert your printer optimized image.</p>
+<pre><code>	/* hide the image */
+    img{
+    display:none;
+    }
+    /* add your own image content */
+    div:after {
+    content:url("image_optimized_for_printing.jpg");
+    }</code></pre>
+
+
+            </div>
+
+            <h2>Print Styles Exercise</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/styling_for_print_exercise.zip">Download the exercise starting files</a></li>
+                    <li>Apply a printer friendly CSS stylesheet using <code>media="print"</code> in the link tag</li>
+                    <li>Style a printer appropriate stylesheet:
+                        <ul>
+                            <li>Hide parts of the page of no use to a printout (eg: site navigation)</li>
+                            <li>If needed, position content appropriately: avoid using <code>float</code></li>
+                            <li>Display the full text URL of hyperlinks</li>
+                            <li>For an additional challenge, use attribute selectors to only output the text URL of hyperlinks that are absolute, don't bother for relative links (since they aren't much use to the printout)</li>
+                        </ul>
+                    </li>
+                    <li>Use your browser's "Print Preview" to test the styles (no need to actually print)</li>
+                    <li><a href="/_shared_resources_1950/downloads/styling_for_print_solution.zip">Download a sample solution</a></li>
+                </ul>
+            </div>
+
+
+
+
+
+            <h2>Media Queries</h2>
+            <div class="contblock">
+
+                <p>Media Queries have become very popular lately with the rise of mobile browsing on both phones, tablets and other devices. You can find a considerable amount of information at the W3C's site for <a href="http://www.w3.org/TR/css3-mediaqueries/">CSS Media Queries</a>. The advanced media queries discussed here are largely CSS3, so consulting the <a href="http://caniuse.com/css-mediaqueries">Media Queries Browser Support Chart</a> can help you decide if your user's browser will be able to take advantage.</p>
+
+                <p>Media Queries are just one part of Responsive Web Design, but they are a very important part. The concept is fairly simple: Use <a href="http://www.w3.org/TR/CSS2/media.html">@media</a> declarations to target device size and/or orientation using CSS</p>
+
+                <p>Because you have already created print stylesheets, you've used the concept! It's fundamentally the same idea, but instead of targeting a specific type of media, you will be targeting a specific size.</p>
+            </div>
+            <h2>Media Queries: Syntax</h2>
+            <div class="contblock">
+                <p>The complete <a href="http://www.w3.org/TR/css3-mediaqueries/">W3C CSS Media Queries specification</a> includes thorough descriptions of all the options available, including several examples. </p>
+                <ul>
+                    <li><strong>Basic Media Query</strong> <p>A basic media query can be used to apply styles based on the type of client. Use it to
+                        choose a stylesheet for <code>screen</code> or <code>print</code>. <br></p><fieldset><legend>Format:</legend><code>@media TYPE{ CSS rules go here }</code> </fieldset><br><em>Examples:</em><br><code>/*styles applied to screen devices*/<br>@media screen{ body{ color:#fff; } }</code> <br><br><code>/*styles applied when printing*/<br>@media print { nav{ display:none;} }</code><p></p>
+
+                        <p>Including the keyword 'only' will ensure the query will be hidden from older browsers that dont understand media queries. Learn more about the  <a href="http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries">media query 'only' keyword</a>.<br><code>@media only screen{ body{ color:#fff; } }</code> </p>
+
+                    </li>
+
+                    <li><strong>Compound Media Query</strong><p>An advanced media query can include compound statements. Use it to be more selective about which styles a client will receive based on how large the client is (eg: desktop vs tablet vs smartphone). Using the <code>and</code> conjunctive, you can chain together a series of conditional statements. <br></p><fieldset><legend>Format:</legend><code>@media TYPE and (FEATURE: VALUE) { CSS rules go here }</code></fieldset><br><em>Examples:</em><br><code>@media only screen and (min-width: 1024px){ body{color:blue;} }</code><br><code>@media only screen and (min-width: 800px) and (max-width: 1024px){ body{color:red;} }</code><br><code>@media only screen and (min-width: 10px) and (max-width: 800px){ body{color:green;} }</code>
+                        <p></p></li>
+                    <li>Note the use of logcal conjunctive <code>and</code>, which ensures more than one condition must be true before the styles will apply. Most media queries will involve one or more <code>and</code>s, but there are other possibilities as well.  If you like, you can learn more about the <a href="https://css-tricks.com/logic-in-media-queries/">media query logic</a> options.</li>
+                    <li><strong>Important:</strong> Most of your queries that reference widths or heights should use <code>and</code>s to define both the upper and lower boundaries. This will ensure a more predictable cascade</li>
+
+                </ul>
+
+                <h3>Options</h3>
+                <ul>
+                    <li><strong><code>TYPE</code></strong>: Target media type, mostly <strong>screen</strong>. If you want older browsers to avoid using your responsive styles, you use <strong>only screen</strong></li>
+                    <li><strong><code>FEATURE</code></strong>: There are a number of <a href="http://www.w3.org/TR/css3-mediaqueries/#media1">features</a> that can be targeted, including:
+                        <ul>
+                            <li><strong>width</strong>: width of the viewport</li>
+                            <li><strong>height</strong>: height of the viewport</li>
+                            <li><strong>min-width, max-width</strong>: minimum/maximum width of the viewport</li>
+                            <li><strong>min-height, max-height</strong>: minimum/maximum height of the viewport</li>
+                            <li><strong>device-width</strong>: width of the device</li>
+                            <li><strong>device-height</strong>: height of the device</li>
+                            <li><strong>orientation</strong>: <code>landscape</code> or <code>portrait</code></li>
+                        </ul>
+                    </li>
+                    <li><strong><code>VALUE</code></strong>: the corresponding value such as size in pixels or other specifications like <code>landscape</code></li>
+                </ul>
+
+            </div>
+            <h2>Media Queries: Implementation</h2>
+            <div class="contblock">
+                <p>When the page is initially rendered, the user agent (browser) will assess the size of the viewport and select CSS based on any media query declarations. This is also true if/as the viewport is resized.</p>
+
+                <h3>Embedded</h3>
+                <p>
+                    Media queries can be specified in the <code>link</code> tag itself, like this:
+                </p>
+                <code>
+                    &lt;link rel="stylesheet" href="smaller.css" media="only screen and (max-width: 1024px)" /&gt;
+                    <br>&lt;link rel="stylesheet" href="larger.css" media="only screen and (min-width: 1024px)" /&gt;
+                    <br>&lt;link rel="stylesheet" href="printer.css" media="print" /&gt;
+                </code>
+
+                <h3>External</h3>
+                <p>Media queries can be defined in the external CSS file, and linked to like any other stylesheet.</p>
+<pre><code>/* styles for screens less than 1024px wide*/
+    @media only screen and (max-width: 1024px){
+    body {	font-size: .8em;	}
+    }
+    /* styles for screens more than 1024px wide*/
+    @media only screen and (min-width: 1024px){
+    body { 	font-size: 2em;		}
+    }
+    /* styles for printers */
+    @media print {
+    header { display:none;		}
+    }</code></pre>
+                <h3>Dealing With Small Device High Resolution Displays</h3>
+                <p>Some devices have been designed to display higher resolution pages in a smaller area.  This can cause confusion when the browser attempts to determine the width and height available. A META tag was designed to get around this issue. Place the following in the <code>head</code> section, <strong>before</strong> you apply your stylesheets: </p>
+                <code>&lt;meta name="viewport" content="initial-scale=1.0, width=device-width" /&gt;</code>
+
+            </div>
+            <h2>Media Queries Example and Exercise</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/media_query_example.zip">Download a media query example</a> and unzip the contents</li>
+                    <li>Examine the CSS, and test the HTML in a varying sized browser</li>
+                    <li>Add 2 new media queries after the ones already declared. Use them to determine the <code>min-height</code>/<code>max-height</code> of the viewport and hide (with <code>display:none;</code>) one of the two spans <code>#tall</code> or <code>#short</code></li>
+                    <li>Copy the first media query rule (the one that applies to small screens) and paste it at the end of all the media queries, so that it is the last of the media queries. How does this change the browser behavior? What kind of compound media query could fix this?</li>
+                    <li>Investigate the <code>orientation</code> feature, and add similar functionality to demonstrate you can detect the difference between <code>portrait</code> and <code>landscape</code></li>
+
+                    <li><a href="/_shared_resources_1950/downloads/media_query_example_solution.zip">Download a sample solution</a></li>
+
+                </ul>
+            </div>
+            <h2>Responsive Design</h2>
+            <div class="contblock">
+
+                <p>The ability to target specific device widths and orientations has made it possible to create "Responsive" web designs. <a href="http://ethanmarcotte.com/">Ethan Marcotte</a> wrote one of the very first articles on <a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive Web Design</a> in 2010, and the idea has taken off since then. </p>
+
+                <p>Using media queries to deliver client specific styles opens up serveral possibilities for the web developer. Some guidelines for taking advantage of the abilities and limitations of client devices:</p>
+
+                <ul>
+                    <li>For small devices, design a one column layout</li>
+                    <li>Stack information in order of importance to the user. Start with an optional header, then a vertical navigation, followed by critical content, ordered by importance. In small devices there often isn't enough space to place all crucial content 'above the fold', so don't feel compelled to try</li>
+                    <li>Due to the dramatically different capabilities of clients, responsive web design is most effective with <strong>content driven</strong> sites as opposed to <strong>feature driven</strong> sites</li>
+                    <li>Dont try to design for specific devices: there are too many, and new different sized devices are appearing all the time. Fluid layouts will adapt more effectively to various device widths.</li>
+
+                    <li>Apply media queries at the breakpoints whererever you can see your layout does not display optimally</li>
+
+
+                </ul>
+            </div>
+
+
+            <h2>Fixed vs Fluid</h2>
+            <div class="contblock">
+                <p>When looking at responsive designs, you must make the decision to build Fixed or Fluid layouts.</p>
+                <p>Fixed are easier to control as you know the widths and don't have to worry about overflowing elements, items that don't fit from side to side, margin and padding calculations and more.</p>
+                <p>Fluid designs use percentage and em (relative) widths for things that allow you to build a style that will scale to ANY size of user agent</p>
+
+
+
+                <p>The Flexible Grid is the key to being successful for fluid designs. There are two primary drivers behind this method:</p>
+                <ol>
+                    <li>target / context = result</li>
+                    <li>max-width: 100%</li>
+                </ol>
+
+                <p>The first calculation relates to your measurements for widths, margins, padding and even font-size when building a fluid design.</p>
+                <h3>Font Sizes</h3>
+
+                <p>For responsive, easy to maintain font sizing, assign a fixed pixel <code>font-size</code> to the <code>body</code>. Then style headings paragraphs etc using  the relative size <code>em</code>.</p>
+                <p>For example, if you desire <code>20px</code> headings, and you have set your <code>body</code> element as having a font-size of <code>16px</code>, then we have the two required parts of our calculation:</p>
+                <p>Target (<code>20px</code>) / Context (<code>16px</code>) = <code>1.25em</code></p>
+
+                <p>Take that 1.25 as a relative measurement based on the default 16px setting. Use it now as the following:</p>
+<pre><code>body{
+    font-family: Arial, "Helvetica Neue", Sans-serif;
+    font-size: 16px;
+    }
+
+    /* target / context = result */
+    /* 20     / 16      = 1.25   */
+    h1{
+    /* This will render the font-size to the equivalent of 20px */
+    font-size: 1.25em;
+    }</code></pre>
+
+
+                <h3>Image widths</h3>
+                <p>One of the biggest challenges to any responsive design is images</p>
+                <p>Most images want to display at full size, but this method means they may be displayed at multiple sizes, and issuing width="..." and height="..." attributes in your IMG tags makes it difficult to make this work.</p>
+                <p>In comes the <strong><code>max-width</code></strong> rule in your CSS</p>
+                <p>Using this rule, you are essentially saying that the image should always be 100% of the parent element</p>
+                <p>With either a fixed or fluid layout, you will have your images respect the parent element's width, so you don't have to add width attributes in your <code>&lt;img&gt;</code> tags.</p>
+<pre><code>img{
+    max-width: 100%;
+    height:auto;
+    }</code></pre>
+            </div>
+            <h2>Fluid Fonts and Images Example</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/responsive_sizing.zip">Download a responsive font and image example</a> and unzip the contents</li>
+                    <li>Examine the HTML and CSS source code and test the HTML page in a varying sized web browser</li>
+                    <li>Try changing the <code>font-size</code> property assigned near the top of the CSS file. Note how changing one value can affect all textual content</li>
+                </ul>
+            </div>
+
+            <h2>Grid Systems</h2>
+            <div class="contblock">
+                <p>Grid systems have been around for some time, trying to assist in the development of layouts</p>
+                <p>An early good one was <a href="http://960.gs">960.gs</a>, which allowed you to specify the number of columns wide you wanted any particular row to be
+                </p><p>Initially focused on Fixed, it moved to including a Fluid layout as well</p>
+                <p>Since then, a huge number of grid systems have been introduced that make it a lot easier to build layouts.</p>
+                <p>Some popular ones:</p>
+                <ul>
+                    <li><a href="http://foundation.zurb.com/">Foundation</a></li>
+                    <li><a href="http://www.getskeleton.com/">Skeleton</a></li>
+                    <li><a href="http://www.columnal.com/">Columnal</a></li>
+                    <li><a href="http://susy.oddbird.net/">Suzy</a></li>
+                </ul>
+
+                <p>However! I think it's very important that you start from scratch at some point, so you understand the limitations and how to adapt a pre-configured layout</p>
+
+            </div>
+
+            <h2>Responsive Layout Exercise</h2>
+            <div class="contblock">
+                <ul>
+                    <li><a href="/_shared_resources_1950/downloads/responsive_layout_exercise.zip">Download the exercise</a> and unzip the contents </li>
+                    <li>Examine the code and note how media queries are already being applied at a 800Px width breakpoint</li>
+                    <li>If the page is wider than 800px then you want to use the current layout, but if it is less than 800px wide, apply a fluid, one column stacked layout: header at top, then vertical navigation, then content</li>
+                    <li>Ensure fonts and images scale fluidly</li>
+                    <li>Test your layout in a varying sized browser</li>
+                    <li>If you own a smartphone or tablet, try uploading your files to your students webspace on <code>bcitcomp.ca</code> and see what it looks like when browsing on the smaller devices</li>
+                    <li><a href="/_shared_resources_1950/downloads/responsive_layout_exercise_solution.zip">Download a sample solution</a></li>
+                </ul>
+            </div>
+
+            <h2>Summary</h2>
+            <div class="contblock">
+                <h3>Styling For Print</h3>
+                <ul>
+                    <li>use the <code>media="print"</code> attribute or <code>@media print{ }</code>to assign print styles</li>
+                    <li>hide navigations, background images, any content that is not useful to a printout</li>
+                    <li>dont use 'float' positioning</li>
+                    <li>apply the <code>:after</code> pseudoclass to fully-quanlified hyperlinks and print the link address with<br><code>content: " (URL: ' attr(href) ') ";</code></li>
+                </ul>
+                <h3>Media Queries</h3>
+                <ul>
+                    <li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">media queries</a> to apply breakpoints whenever your layout does not display optimally
+                        <fieldset><legend>Format:</legend><code>@media TYPE and (FEATURE: VALUE) { CSS rules go here }</code></fieldset>
+                        <ul>
+                            <li><a href="http://www.w3.org/TR/css3-mediaqueries/">W3C CSS Media Queries</a></li>
+                            <li><a href="http://www.w3.org/TR/css3-mediaqueries/#media1">features</a></li>
+                            <li><a href="https://css-tricks.com/logic-in-media-queries/">media query logic</a></li>
+                        </ul>
+                    </li>
+                    <li>Ensure your media queries identify high-resolution small devices appropriately by adding the following inside the <code>&lt;head&gt;</code>: <br><code>&lt;meta name="viewport" content="initial-scale=1.0, width=device-width" /&gt;</code>
+                    </li>
+                </ul>
+                <h3>Responsive Design</h3>
+                <ul>
+
+                    <li>Build fluid, flexible layouts. For small devices, use a one column stack, with the most important page elements (such as a vertical navigation) top most.</li>
+                    <li>Best Practices: <a href="http://www.smashingmagazine.com/responsive-web-design-guidelines-tutorials/">Smashing Magazine Guidelines and Tutorials</a></li>
+
+                </ul>
+                <p>Session #6's quiz will be written, closed book</p>
+
+            </div>
+            <h2>Homework</h2>
+            <div class="contblock">
+                <ul>
+                    <li>due by midnight before session #7 (there will be no new homework session #6)</li>
+                    <li>worth twice as much as other homework assignments</li>
+                    <li>homework specifications will be available here for download upon release. check back later for an active download link</li>
+                    <li><a href="/_shared_resources_1950/downloads/comp1950_homework05.pdf">download the homework</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
 
 </section>
 <section class="locked">
@@ -131,13 +2769,27 @@
     <div class="lectureImg"></div>
     <h1>06 | css3</h1>
     <ul>
-        <li>Quiz #5</li>
         <li>CSS3</li>
         <li>Compatibility</li>
         <li>Box model</li>
         <li>Transitions</li>
         <li>Backgrounds</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+    </main>
 
 </section>
 <section class="locked">
@@ -151,18 +2803,47 @@
         <li>Plugins</li>
     </ul>
 
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+    </main>
+
 </section>
 <section class="locked">
 
     <div class="lectureImg"></div>
     <h1>08 | dynamic content</h1>
     <ul>
-        <li>Quiz #6</li>
         <li>Server side development</li>
         <li>Server environment and configuration</li>
         <li>Server side includes, tokens</li>
         <li>Query string value passing</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+    </main>
 
 </section>
 
@@ -171,10 +2852,24 @@
     <div class="lectureImg"></div>
     <h1>09 | templating, seo</h1>
     <ul>
-        <li>Quiz #7</li>
         <li>Search Engine Optimization</li>
         <li>Templating Systems</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+    </main>
 
 </section>
 <section class="locked">
@@ -182,12 +2877,26 @@
     <div class="lectureImg"></div>
     <h1>10 | methodology</h1>
     <ul>
-        <li>Quiz #8</li>
         <li>final exam preparation</li>
         <li>collaborative frameworks</li>
         <li>methodology</li>
         <li>group project</li>
     </ul>
+
+    <div class="lectureShortcuts">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+    </main>
 
 </section>
 
@@ -198,6 +2907,21 @@
     <p>
         Using production methods and development techniques from throughout this course, your group will create a proto-site and documents to support the redesign of the COMP1950 web site.
     </p>
+
+    <div class="lectureShortcuts hidden">
+        <a class="lectureShortcutImg summary" href="#"><p>Summary</p></a>
+        <a class="lectureShortcutImg exercise" href="#"><p>Exercises</p></a>
+        <a class="lectureShortcutImg quiz" href="#"><p>Quiz</p></a>
+    </div>
+
+    <section class="quizWrapper start hidden">
+        <h6 title="Very not easy quiz!! You better study for this one!!">START QUIZ</h6>
+
+    </section>
+
+    <main class="hidden">
+
+    </main>
 
 </section>
 
@@ -223,5 +2947,7 @@
 
 
 </body>
+
+    <script src="../protosite/js/protosite.js"></script>
 
 </html>
