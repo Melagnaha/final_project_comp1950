@@ -341,6 +341,10 @@ main > div b{
     color:chocolate;
 }
 
+main h3{
+    color:darkslategrey;
+}
+
 .start{
     background-color:rgb(70, 190, 94);
     text-align: center;
