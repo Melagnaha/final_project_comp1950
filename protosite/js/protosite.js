@@ -7,6 +7,15 @@ $(document).ready(function(){
 
     // functions
 
+    $('section').each(function(){
+
+        if($(this).hasClass('locked')){
+            $(this).children('.lectureShortcuts').children('.summary').hide();
+            $(this).children('.lectureShortcuts').children('.exercise').hide();
+        }
+    });
+
+
     function loadQuiz (e){
 
         var quiz = $(this).parent().siblings('section.quizWrapper');
