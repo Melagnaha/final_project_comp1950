@@ -303,6 +303,8 @@ section dt {
     height:80px;
     border-radius:10px;
     border: 2px dashed #d5d1d7;
+    background-image:url('../img/icon.png');
+    background-size: 80px;
 }
 
 .lecture{
