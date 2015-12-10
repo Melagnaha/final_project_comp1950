@@ -138,6 +138,7 @@ nav{
 .menuButton{
     float:right;
     width: 10%;
+    min-width: 80px;
     height:inherit;
     list-style-type: none;
     color:floralwhite;
@@ -179,9 +180,9 @@ section{
     width:88%;
     height:auto;
     min-width: 120px;
-    padding:10px 20px 12px;
+    padding:10px 10px 12px;
     margin:12px auto 20px;
-
+    min-height: 100px;
     border-style:solid;
     border-radius: 12px;
     border-color:floralwhite;
@@ -262,7 +263,8 @@ section dt {
 /* ******** classes ******** */
 
 .info{
-    width:92%;
+    min-height: 40px;
+    width:72%;
     color:floralwhite ;
     background-color:coral;
     border-style: dashed;
@@ -290,6 +292,7 @@ section dt {
     text-align: center;
     color: floralwhite;
     font-size: 0.8rem;
+    min-width: 80px;
 
     transition: all 200ms ease-in-out;
 }
@@ -306,6 +309,7 @@ section dt {
     border: 2px dashed #d5d1d7;
     background-image:url('../img/icon.png');
     background-size: 80px;
+    margin: 12px;
 }
 
 .lecture{
@@ -363,4 +367,25 @@ main h3{
 
 .hidden{
     display:none;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .hideOnSmall{
+        display:none;
+    }
+
+    .lectureShortcuts {
+        width: 100%;
+        float: right;
+        position: absolute;
+        top: 70px;
+        right: 2%;
+    }
+
+    header{
+        height: 20px;
+        width:80%;
+    }
+
 }
