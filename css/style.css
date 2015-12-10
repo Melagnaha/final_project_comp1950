@@ -72,6 +72,8 @@
     }
 
     div img {
+        width: 90%;
+        height:auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
