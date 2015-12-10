@@ -17,6 +17,7 @@ AddHandler server-parsed .shtml .html .htm
 Options Indexes FollowSymLinks Includes
 
 
+
 ErrorDocument 404     /students/vmakselis/error_404.html
 
 
