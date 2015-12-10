@@ -16,7 +16,7 @@ AddType text/html .shtml .html .htm
 AddHandler server-parsed .shtml .html .htm
 Options Indexes FollowSymLinks Includes
 
-ErrorDocument 404     /students/molson29/errors/404_error.html
+ErrorDocument 404     /students/vmakselis/errors/404_error.html
 
 # learn more about using .htaccess:
 # http://www.javascriptkit.com/howto/htaccess.shtml
