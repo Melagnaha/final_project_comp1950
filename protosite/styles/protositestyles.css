@@ -113,17 +113,18 @@ nav{
 
 
 #rightSideMenuItems{
+
     margin:0 40px 0 0;
 }
 
 #rightSideMenuItems li a{
-
+    width: 100%;
     padding:0;
     margin:0;
     display:block;
     text-decoration:none;
     color:floralwhite;
-    align-self: center;
+    text-align: center;
 
     transition: color 200ms, font-size 200ms;
 }
@@ -237,7 +238,7 @@ section dt {
     margin:0;
     text-decoration:none;
     color:floralwhite;
-    align-self: center;
+    text-align: center;
 
     transition: color 200ms, font-size 200ms;
 }
